@@ -1,0 +1,49 @@
+services:
+  fuseki:
+    image: stain/jena-fuseki:latest
+    container_name: flora-fauna-fuseki
+    ports:
+      - "3030:3030"
+    environment:
+      ADMIN_PASSWORD: admin
+      FUSEKI_DATASET_1: flora-fauna
+    volumes:
+      - fuseki-data:/fuseki
+
+  rdf-loader:
+    build: .
+    container_name: flora-fauna-rdf-loader
+    command: python scripts/refresh_data.py
+    environment:
+      FUSEKI_DATA_URL: http://fuseki:3030/flora-fauna/data?default
+      FUSEKI_USER: admin
+      FUSEKI_PASSWORD: admin
+    volumes:
+      - ./data:/app/data
+      - ./ontology:/app/ontology:ro
+      - ./scripts:/app/scripts:ro
+    depends_on:
+      fuseki:
+        condition: service_started
+    restart: "no"
+
+  web:
+    build: .
+    container_name: flora-fauna-web
+    ports:
+      - "5000:5000"
+    environment:
+      SPARQL_ENDPOINT: http://fuseki:3030/flora-fauna/sparql
+      PORT: 5000
+      FLASK_DEBUG: "false"
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GEMINI_BASE_URL: ${GEMINI_BASE_URL:-https://generativelanguage.googleapis.com/v1beta}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-2.5-flash}
+    volumes:
+      - ./frontend/dist:/app/frontend/dist:ro
+    depends_on:
+      rdf-loader:
+        condition: service_completed_successfully
+
+volumes:
+  fuseki-data:

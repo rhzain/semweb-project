@@ -1,0 +1,173 @@
+@prefix ff: <http://example.org/flora-fauna/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ff: a owl:Ontology ;
+    rdfs:label "Ontologi Leksikon Flora dan Fauna Indonesia" ;
+    rdfs:comment "Ontologi untuk memodelkan entri leksikon nama ilmiah, nama umum, sinonim ilmiah, dan relasi taksonomi flora-fauna Indonesia." .
+
+ff:LexicalEntry a owl:Class ;
+    rdfs:label "Lexical Entry" ;
+    rdfs:comment "Entri leksikon yang merepresentasikan istilah atau nama." .
+
+ff:SpeciesEntry a owl:Class ;
+    rdfs:subClassOf ff:LexicalEntry ;
+    rdfs:label "Species Entry" ;
+    rdfs:comment "Entri leksikon untuk satu spesies flora atau fauna." .
+
+ff:FloraEntry a owl:Class ;
+    rdfs:subClassOf ff:SpeciesEntry ;
+    rdfs:label "Flora Entry" .
+
+ff:FaunaEntry a owl:Class ;
+    rdfs:subClassOf ff:SpeciesEntry ;
+    rdfs:label "Fauna Entry" .
+
+ff:Taxon a owl:Class ;
+    rdfs:label "Taxon" ;
+    rdfs:comment "Konsep taksonomi yang mengelompokkan spesies." .
+
+ff:Kingdom a owl:Class ;
+    rdfs:subClassOf ff:Taxon ;
+    rdfs:label "Kingdom" .
+
+ff:TaxonomicClass a owl:Class ;
+    rdfs:subClassOf ff:Taxon ;
+    rdfs:label "Taxonomic Class" .
+
+ff:Order a owl:Class ;
+    rdfs:subClassOf ff:Taxon ;
+    rdfs:label "Order" .
+
+ff:Family a owl:Class ;
+    rdfs:subClassOf ff:Taxon ;
+    rdfs:label "Family" .
+
+ff:Genus a owl:Class ;
+    rdfs:subClassOf ff:Taxon ;
+    rdfs:label "Genus" .
+
+ff:Category a owl:Class ;
+    rdfs:label "Lexicon Category" ;
+    rdfs:comment "Kategori leksikon seperti Mamalia, Burung, Pohon, Palem, atau Anggrek." .
+
+ff:Habitat a owl:Class ;
+    rdfs:label "Habitat" .
+
+ff:hasKingdom a owl:ObjectProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range ff:Kingdom ;
+    rdfs:label "has kingdom" .
+
+ff:hasTaxonomicClass a owl:ObjectProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range ff:TaxonomicClass ;
+    rdfs:label "has taxonomic class" .
+
+ff:hasOrder a owl:ObjectProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range ff:Order ;
+    rdfs:label "has order" .
+
+ff:hasFamily a owl:ObjectProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range ff:Family ;
+    rdfs:label "has family" .
+
+ff:hasGenus a owl:ObjectProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range ff:Genus ;
+    rdfs:label "has genus" .
+
+ff:hasCategory a owl:ObjectProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range ff:Category ;
+    rdfs:label "has category" .
+
+ff:hasHabitat a owl:ObjectProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range ff:Habitat ;
+    rdfs:label "has habitat" .
+
+ff:taxonomicallyRelatedTo a owl:ObjectProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range ff:SpeciesEntry ;
+    rdfs:label "taxonomically related to" .
+
+ff:sameKingdomAs a owl:ObjectProperty ;
+    rdfs:subPropertyOf ff:taxonomicallyRelatedTo ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range ff:SpeciesEntry ;
+    rdfs:label "same kingdom as" .
+
+ff:sameClassAs a owl:ObjectProperty ;
+    rdfs:subPropertyOf ff:taxonomicallyRelatedTo ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range ff:SpeciesEntry ;
+    rdfs:label "same class as" .
+
+ff:sameOrderAs a owl:ObjectProperty ;
+    rdfs:subPropertyOf ff:taxonomicallyRelatedTo ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range ff:SpeciesEntry ;
+    rdfs:label "same order as" .
+
+ff:sameFamilyAs a owl:ObjectProperty ;
+    rdfs:subPropertyOf ff:taxonomicallyRelatedTo ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range ff:SpeciesEntry ;
+    rdfs:label "same family as" .
+
+ff:sameGenusAs a owl:ObjectProperty ;
+    rdfs:subPropertyOf ff:taxonomicallyRelatedTo ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range ff:SpeciesEntry ;
+    rdfs:label "same genus as" .
+
+ff:entryId a owl:DatatypeProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range xsd:string ;
+    rdfs:label "entry id" .
+
+ff:scientificName a owl:DatatypeProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range xsd:string ;
+    rdfs:label "scientific name" .
+
+ff:indonesianName a owl:DatatypeProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range xsd:string ;
+    rdfs:label "Indonesian name" .
+
+ff:englishName a owl:DatatypeProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range xsd:string ;
+    rdfs:label "English name" .
+
+ff:scientificSynonym a owl:DatatypeProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range xsd:string ;
+    rdfs:label "scientific synonym" .
+
+ff:description a owl:DatatypeProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range xsd:string ;
+    rdfs:label "description" .
+
+ff:endemismStatus a owl:DatatypeProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range xsd:string ;
+    rdfs:label "endemism status" .
+
+ff:sourceData a owl:DatatypeProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range xsd:string ;
+    rdfs:label "source data" .
+
+ff:searchText a owl:DatatypeProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range xsd:string ;
+    rdfs:label "search text" .
+

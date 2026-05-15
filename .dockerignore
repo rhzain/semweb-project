@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+.git/
+.env
+.env*
+!.env.example
+fuseki-data/
+frontend/node_modules/
+frontend/dist/
