@@ -118,7 +118,7 @@ function HomePage() {
           <p className="eyebrow">Knowledge Graph Leksikon Indonesia</p>
           <h1>Leksikon nama ilmiah, nama lokal, dan relasi taksonomi flora-fauna.</h1>
           <p className="hero-copy">
-            Cari spesies dari nama Indonesia, nama Latin, nama Inggris, family, genus, kategori,
+            Cari spesies dari nama Indonesia, nama Latin, nama Inggris, phylum, family, genus, kategori,
             atau sinonim ilmiah. Hasilnya berasal dari RDF Turtle yang di-query melalui SPARQL.
           </p>
         </div>
@@ -181,7 +181,7 @@ function HomePage() {
 
       <section className="feature-grid">
         <FeatureCard icon={Database} title="Katalog semua data" text="Tampilkan seluruh entri RDF sebagai katalog yang bisa difilter." />
-        <FeatureCard icon={Network} title="Visualisasi graph" text="Lihat node spesies, kingdom, family, genus, dan kategori sebagai knowledge graph." />
+        <FeatureCard icon={Network} title="Visualisasi graph" text="Lihat node spesies, kingdom, phylum, family, genus, dan kategori sebagai knowledge graph." />
         <FeatureCard icon={Sparkles} title="AI Explanation Assistant" text="Gemini menjelaskan hasil SPARQL tanpa menjadi sumber data utama." />
       </section>
     </div>
@@ -228,7 +228,7 @@ function DataPage() {
             <span>Cari data</span>
             <div className="input-icon">
               <Search size={18} />
-              <input value={q} onChange={(event) => updateParam("q", event.target.value)} placeholder="Nama, family, genus, kategori" />
+              <input value={q} onChange={(event) => updateParam("q", event.target.value)} placeholder="Nama, phylum, family, genus, kategori" />
             </div>
           </label>
           <label className="field">
@@ -273,16 +273,15 @@ function SpeciesGrid({ items }) {
             <p className="card-kicker">{item.kingdomLabel} · {item.categoryLabel}</p>
             <h2>{item.indonesianName}</h2>
             <p className="latin">{item.scientificName}</p>
-            <p>{item.description}</p>
           </div>
           <dl className="mini-meta">
             <div>
-              <dt>Family</dt>
-              <dd>{item.familyLabel}</dd>
+              <dt>Phylum</dt>
+              <dd>{item.phylumLabel}</dd>
             </div>
             <div>
-              <dt>Genus</dt>
-              <dd>{item.genusLabel}</dd>
+              <dt>Family</dt>
+              <dd>{item.familyLabel}</dd>
             </div>
             <div>
               <dt>Inggris</dt>
@@ -334,7 +333,6 @@ function DetailPage() {
           <p className="eyebrow">{item.kingdomLabel} · {item.categoryLabel}</p>
           <h1>{item.indonesianName}</h1>
           <p className="latin large">{item.scientificName}</p>
-          <p>{item.description}</p>
         </div>
         <div className="action-row">
           <button className="button primary" onClick={explainWithAi} disabled={aiLoading} type="button">
@@ -356,16 +354,15 @@ function DetailPage() {
           ["Nama ilmiah", item.scientificName],
           ["Nama Inggris", item.englishName],
           ["Sinonim ilmiah", item.scientificSynonyms || "-"],
-          ["Status endemik", item.endemismStatus],
           ["Sumber data", item.sourceData],
         ]} />
         <InfoPanel title="Taksonomi" rows={[
           ["Kingdom", item.kingdomLabel],
+          ["Phylum", item.phylumLabel],
           ["Kelas", item.classLabel],
           ["Ordo", item.orderLabel],
           ["Family", item.familyLabel],
           ["Genus", item.genusLabel],
-          ["Habitat", item.habitatLabel],
         ]} />
       </section>
 
@@ -422,7 +419,7 @@ function ComparePage() {
       <PageTitle
         eyebrow="Relasi Taksonomi"
         title="Bandingkan Dua Spesies"
-        text="Sistem menilai kedekatan dari kesamaan kingdom, kelas, ordo, family, dan genus."
+        text="Sistem menilai kedekatan dari kesamaan kingdom, phylum, kelas, ordo, family, dan genus."
       />
       <section className="panel toolbar">
         <SpeciesSelect label="Spesies pertama" value={speciesA} options={optionsData.items} onChange={(value) => update("species_a", value)} />
@@ -486,7 +483,7 @@ function GraphPage() {
       <PageTitle
         eyebrow="Visualisasi Knowledge Graph"
         title="Graph Spesies dan Takson"
-        text="Node spesies dihubungkan ke kingdom, kelas, ordo, family, genus, dan kategori melalui RDF property."
+        text="Node spesies dihubungkan ke kingdom, phylum, kelas, ordo, family, genus, dan kategori melalui RDF property."
       />
       <section className="panel toolbar">
         <SpeciesSelect
