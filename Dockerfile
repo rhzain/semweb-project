@@ -23,4 +23,4 @@ COPY --from=frontend-build /frontend/dist /app/frontend/dist
 
 EXPOSE 5000
 
-CMD ["python", "app.py"]
+CMD ["python", "backend/app.py"]
