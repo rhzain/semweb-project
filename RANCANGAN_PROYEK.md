@@ -1,4 +1,4 @@
-# Rancangan Proyek Akhir Semantic Web
+﻿# Rancangan Proyek Akhir Semantic Web
 
 ## 1. Judul Proyek Akademik
 
@@ -10,13 +10,13 @@ Alternatif judul yang lebih ringkas:
 
 ## 2. Deskripsi Singkat Proyek
 
-Proyek ini membangun aplikasi web pencarian leksikon flora dan fauna Indonesia. Aplikasi memungkinkan pengguna mencari spesies berdasarkan nama ilmiah, nama lokal Indonesia, nama Inggris, sinonim ilmiah, family, genus, kategori, dan klasifikasi taksonomi. Data awal disusun dalam CSV, dikonversi menjadi RDF Turtle, dimodelkan menggunakan ontologi, dimuat ke Apache Jena Fuseki sebagai SPARQL endpoint, lalu diakses oleh frontend React melalui backend API Flask.
+Proyek ini membangun aplikasi web pencarian leksikon flora dan fauna Indonesia. Aplikasi memungkinkan pengguna mencari spesies berdasarkan nama ilmiah, nama lokal Indonesia, nama Inggris, sinonim ilmiah, phylum, family, genus, kategori, dan klasifikasi taksonomi. Data awal disusun dalam CSV, dikonversi menjadi RDF Turtle, dimodelkan menggunakan ontologi, dimuat ke Apache Jena Fuseki sebagai SPARQL endpoint, lalu diakses oleh frontend React melalui backend API Flask.
 
 Fokus utama proyek bukan membuat database biologi biasa, melainkan membuat **leksikon semantik** yang menghubungkan variasi nama, sinonim ilmiah, istilah lokal, istilah Inggris, dan relasi taksonomi dalam bentuk **subject-predicate-object** pada knowledge graph.
 
 ## 3. Latar Belakang Singkat
 
-Nama flora dan fauna memiliki banyak variasi: satu spesies dapat memiliki nama ilmiah, nama lokal Indonesia, nama Inggris, sinonim ilmiah, serta posisi taksonomi seperti kingdom, kelas, ordo, family, dan genus. Pada sistem pencarian biasa, hubungan antaristilah sering hanya disimpan sebagai kolom tabel, sehingga relasi semantiknya tidak eksplisit.
+Nama flora dan fauna memiliki banyak variasi: satu spesies dapat memiliki nama ilmiah, nama lokal Indonesia, nama Inggris, sinonim ilmiah, serta posisi taksonomi seperti kingdom, phylum, kelas, ordo, family, dan genus. Pada sistem pencarian biasa, hubungan antaristilah sering hanya disimpan sebagai kolom tabel, sehingga relasi semantiknya tidak eksplisit.
 
 Semantic Web menyediakan pendekatan yang lebih kaya melalui RDF, ontologi, dan SPARQL. Dengan RDF, setiap data direpresentasikan sebagai triple. Dengan ontologi, konsep leksikon dan taksonomi dapat didefinisikan secara eksplisit. Dengan SPARQL endpoint, data dapat dicari dan dihubungkan melalui query semantik. Oleh karena itu, proyek ini cocok sebagai studi kasus penerapan Semantic Web pada leksikon nama ilmiah flora dan fauna Indonesia.
 
@@ -26,7 +26,7 @@ Semantic Web menyediakan pendekatan yang lebih kaya melalui RDF, ontologi, dan S
 2. Bagaimana merancang ontologi yang menggambarkan konsep leksikon dan klasifikasi taksonomi?
 3. Bagaimana menyediakan SPARQL endpoint untuk mengambil data leksikon berbasis RDF?
 4. Bagaimana membangun website pencarian yang dapat mengakses data RDF melalui SPARQL?
-5. Bagaimana menampilkan hubungan semantik antarspesies, seperti kesamaan kingdom, kelas, ordo, family, dan genus?
+5. Bagaimana menampilkan hubungan semantik antarspesies, seperti kesamaan kingdom, phylum, kelas, ordo, family, dan genus?
 
 ## 5. Tujuan Proyek
 
@@ -44,7 +44,7 @@ Semantic Web menyediakan pendekatan yang lebih kaya melalui RDF, ontologi, dan S
 3. Dataset dibuat untuk kebutuhan proyek leksikon Semantic Web, bukan sebagai rujukan taksonomi biologis final.
 4. Sistem berfokus pada pencarian leksikon nama dan hubungan taksonomi dasar.
 5. Sistem belum menerapkan reasoning OWL kompleks.
-6. Relasi kedekatan spesies dihitung dari kesamaan taksonomi: kingdom, kelas, ordo, family, dan genus.
+6. Relasi kedekatan spesies dihitung dari kesamaan taksonomi: kingdom, phylum, kelas, ordo, family, dan genus.
 
 ## 7. Alasan Proyek Ini Termasuk Data Linguistik/Leksikon
 
@@ -62,12 +62,12 @@ Dengan kata lain, sistem ini memperlakukan nama spesies sebagai data bahasa dan 
 
 ## 8. Struktur Data CSV yang Disarankan
 
-File: `data/flora_fauna.csv`
+File: `data.csv/processed/species_enriched.csv`
 
 Kolom minimal:
 
 ```csv
-id,nama_latin,nama_indonesia,nama_inggris,kingdom,kelas,ordo,family,genus,kategori,habitat,deskripsi,sinonim_ilmiah,status_endemik,sumber_data
+id,nama_latin,nama_indonesia,nama_inggris,kingdom,phylum,kelas,ordo,family,genus,kategori,habitat,deskripsi,sinonim_ilmiah,status_endemik,sumber_data
 ```
 
 Penjelasan:
@@ -79,6 +79,7 @@ Penjelasan:
 | `nama_indonesia` | Nama lokal atau nama umum bahasa Indonesia. |
 | `nama_inggris` | Nama umum bahasa Inggris. |
 | `kingdom` | Kingdom taksonomi, misalnya `Plantae` atau `Animalia`. |
+| `phylum` | Phylum taksonomi, misalnya `Tracheophyta`, `Chordata`, atau `Arthropoda`. |
 | `kelas` | Kelas taksonomi. |
 | `ordo` | Ordo taksonomi. |
 | `family` | Family taksonomi. |
@@ -92,12 +93,16 @@ Penjelasan:
 
 ## 9. Dataset 100 Data Awal CSV
 
-Dataset lengkap tersedia di file `data/flora_fauna.csv`. Dataset berisi 100 entri:
+Dataset lengkap tersedia di file `data.csv/processed/species_enriched.csv`. Dataset berisi 100 entri:
 
 1. 50 flora Indonesia dengan kingdom `Plantae`.
 2. 50 fauna Indonesia dengan kingdom `Animalia`.
 
-Setiap entri memiliki URL sumber pada kolom `sumber_data`. Data taksonomi seperti `kingdom`, `kelas`, `ordo`, `family`, dan `genus` diambil/validasi dari GBIF. Jika GBIF tidak menyediakan level tertentu, script menggunakan Wikidata sebagai fallback terbuka. Laporan validasi tersedia di `data/validation_report.csv`.
+Setiap entri memiliki URL sumber pada kolom `sumber_data`. Data taksonomi seperti `kingdom`, `phylum`, `kelas`, `ordo`, `family`, dan `genus` diambil/validasi dari GBIF dan diperkaya dengan Wikidata bila tersedia. Nama umum diambil dari Wikidata label dan GBIF `vernacularNames`; deskripsi dari Wikidata description dan GBIF `descriptions`; habitat dari Wikidata `P2974` dan GBIF `speciesProfiles`; status endemik dari Wikidata `P183` bila tersedia. Raw output API disimpan di `data.csv/raw/gbif_results.csv` dan `data.csv/raw/wikidata_results.csv`.
+
+Daftar pencarian API dipisahkan di `data.csv/seed/species_seed.csv` dan berisi ID, nama yang dicari, kingdom hint, serta keterangan sumber seed. Seed ini disusun manual untuk menentukan 50 flora dan 50 fauna target proyek, lalu setiap nama ilmiah divalidasi dan diperkaya melalui GBIF/Wikidata. Field yang tidak tersedia dari API ditulis sebagai `Tidak tersedia dari API`, tanpa data lokal pengganti.
+
+Beberapa field seperti habitat dan status endemik tidak selalu tersedia secara terstruktur di GBIF/Wikidata untuk semua spesies. Pipeline tidak mengarang nilai untuk menutup kekosongan tersebut; kelengkapan 100% hanya bisa dicapai jika proyek menambah sumber terstruktur lain atau melakukan kurasi manual yang sumbernya dicatat jelas.
 
 Contoh entri flora:
 
@@ -134,6 +139,7 @@ Namespace:
 | `ff:FaunaEntry` | Entri spesies fauna. |
 | `ff:Taxon` | Konsep taksonomi umum. |
 | `ff:Kingdom` | Kingdom. |
+| `ff:Phylum` | Phylum. |
 | `ff:TaxonomicClass` | Kelas taksonomi. |
 | `ff:Order` | Ordo. |
 | `ff:Family` | Family. |
@@ -146,6 +152,7 @@ Namespace:
 | Object Property | Domain | Range |
 |---|---|---|
 | `ff:hasKingdom` | `ff:SpeciesEntry` | `ff:Kingdom` |
+| `ff:hasPhylum` | `ff:SpeciesEntry` | `ff:Phylum` |
 | `ff:hasTaxonomicClass` | `ff:SpeciesEntry` | `ff:TaxonomicClass` |
 | `ff:hasOrder` | `ff:SpeciesEntry` | `ff:Order` |
 | `ff:hasFamily` | `ff:SpeciesEntry` | `ff:Family` |
@@ -154,6 +161,7 @@ Namespace:
 | `ff:hasHabitat` | `ff:SpeciesEntry` | `ff:Habitat` |
 | `ff:taxonomicallyRelatedTo` | `ff:SpeciesEntry` | `ff:SpeciesEntry` |
 | `ff:sameKingdomAs` | `ff:SpeciesEntry` | `ff:SpeciesEntry` |
+| `ff:samePhylumAs` | `ff:SpeciesEntry` | `ff:SpeciesEntry` |
 | `ff:sameClassAs` | `ff:SpeciesEntry` | `ff:SpeciesEntry` |
 | `ff:sameOrderAs` | `ff:SpeciesEntry` | `ff:SpeciesEntry` |
 | `ff:sameFamilyAs` | `ff:SpeciesEntry` | `ff:SpeciesEntry` |
@@ -184,6 +192,7 @@ data:kucing a ff:SpeciesEntry, ff:FaunaEntry ;
     ff:englishName "Domestic cat" ;
     ff:scientificSynonym "Felis silvestris catus" ;
     ff:hasKingdom data:kingdom_animalia ;
+    ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
     ff:hasOrder data:order_carnivora ;
     ff:hasFamily data:family_felidae ;
@@ -197,20 +206,39 @@ data:harimau a ff:SpeciesEntry, ff:FaunaEntry ;
     ff:englishName "Tiger" ;
     ff:scientificSynonym "Felis tigris" ;
     ff:hasKingdom data:kingdom_animalia ;
+    ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
     ff:hasOrder data:order_carnivora ;
     ff:hasFamily data:family_felidae ;
     ff:hasGenus data:genus_panthera .
 ```
 
-## 12. Script Python `csv_to_rdf.py`
+## 12. Script Pipeline Python
 
-Script tersedia di `scripts/csv_to_rdf.py`. Script membaca `data/flora_fauna.csv`, membuat URI untuk spesies dan takson, lalu menghasilkan `data/flora_fauna.ttl`.
+Script pipeline tersedia di folder `python_script/` dengan pembagian tugas berikut:
+
+| File | Fungsi |
+|---|---|
+| `scrape/main.py` | Entry point untuk membangun raw API CSV dan `data.csv/processed/species_enriched.csv`. |
+| `scrape/api_clients.py` | Fungsi pengambilan data dari GBIF dan Wikidata. |
+| `scrape/build_dataset.py` | Logic penggabungan search terms dan API enrichment. |
+| `rdf/main.py` | Entry point konversi `data.csv/processed/species_enriched.csv` menjadi `rdf/flora_fauna.ttl`. |
+| `rdf/converter.py` | Logic RDFLib untuk membangun triple RDF. |
+| `load/main.py` | Entry point upload ontologi dan RDF ke Apache Jena Fuseki. |
+| `refresh/main.py` | Entry point regenerate RDF lalu upload ulang ke Fuseki. |
 
 Contoh menjalankan:
 
 ```bash
-python scripts/csv_to_rdf.py
+python python_script/rdf/main.py
+```
+
+Jika memakai Docker:
+
+```bash
+docker compose run --rm --no-deps web python python_script/scrape/main.py
+docker compose run --rm --no-deps web python python_script/rdf/main.py
+docker compose run --rm rdf-loader
 ```
 
 ## 13. File `ontology.ttl`
@@ -219,7 +247,7 @@ File ontologi tersedia di `ontology/ontology.ttl`. File ini mendefinisikan class
 
 ## 14. File `flora_fauna.ttl`
 
-File RDF hasil contoh tersedia di `data/flora_fauna.ttl`. File ini dapat dihasilkan ulang dari CSV menggunakan script konversi.
+File RDF hasil contoh tersedia di `rdf/flora_fauna.ttl`. File ini dapat dihasilkan ulang dari CSV menggunakan script konversi.
 
 ## 15. Setup Seluruh Aplikasi Menggunakan Docker Compose
 
@@ -246,15 +274,16 @@ services:
 
   rdf-loader:
     build: .
-    command: python scripts/refresh_data.py
+    command: python python_script/refresh/main.py
     environment:
       FUSEKI_DATA_URL: http://fuseki:3030/flora-fauna/data?default
       FUSEKI_USER: admin
       FUSEKI_PASSWORD: admin
     volumes:
-      - ./data:/app/data
+      - ./data.csv:/app/data.csv
+      - ./rdf:/app/rdf
       - ./ontology:/app/ontology:ro
-      - ./scripts:/app/scripts:ro
+      - ./python_script:/app/python_script:ro
     depends_on:
       fuseki:
         condition: service_started
@@ -272,7 +301,10 @@ services:
       GEMINI_BASE_URL: ${GEMINI_BASE_URL:-https://generativelanguage.googleapis.com/v1beta}
       GEMINI_MODEL: ${GEMINI_MODEL:-gemini-2.5-flash}
     volumes:
-      - ./frontend/dist:/app/frontend/dist:ro
+      - ./data.csv:/app/data.csv
+      - ./rdf:/app/rdf
+      - ./ontology:/app/ontology:ro
+      - ./python_script:/app/python_script:ro
     depends_on:
       rdf-loader:
         condition: service_completed_successfully
@@ -289,7 +321,7 @@ docker compose up --build
 
 ## 16. Cara Upload/Load RDF ke Jena Fuseki
 
-Pada mode Docker Compose penuh, RDF dimuat otomatis oleh service `rdf-loader`. Service ini menjalankan `csv_to_rdf.py`, menggabungkan `ontology/ontology.ttl` dan `data/flora_fauna.ttl`, lalu mengirimkannya ke Fuseki melalui Graph Store Protocol.
+Pada mode Docker Compose penuh, RDF dimuat otomatis oleh service `rdf-loader`. Service ini menjalankan `python_script/refresh/main.py`, menggenerate `rdf/flora_fauna.ttl` dari `data.csv/processed/species_enriched.csv`, menggabungkan `ontology/ontology.ttl` dan `rdf/flora_fauna.ttl`, lalu mengirimkannya ke Fuseki melalui Graph Store Protocol.
 
 Cara manual melalui UI tetap dapat digunakan:
 
@@ -299,7 +331,7 @@ Cara manual melalui UI tetap dapat digunakan:
 4. Masuk ke menu upload data.
 5. Upload:
    - `ontology/ontology.ttl`
-   - `data/flora_fauna.ttl`
+   - `rdf/flora_fauna.ttl`
 
 Cara manual melalui curl:
 
@@ -311,7 +343,7 @@ curl -u admin:admin -X POST \
 
 curl -u admin:admin -X POST \
   -H "Content-Type: text/turtle" \
-  --data-binary "@data/flora_fauna.ttl" \
+  --data-binary "@rdf/flora_fauna.ttl" \
   "http://localhost:3030/flora-fauna/data?default"
 ```
 
@@ -446,6 +478,7 @@ SELECT ?level ?labelA ?labelB
 WHERE {
   VALUES (?level ?property) {
     ("Kingdom" ff:hasKingdom)
+    ("Phylum" ff:hasPhylum)
     ("Kelas" ff:hasTaxonomicClass)
     ("Ordo" ff:hasOrder)
     ("Family" ff:hasFamily)
@@ -460,11 +493,11 @@ WHERE {
 
 ## 19. Rancangan Fitur Website
 
-1. Search bar untuk mencari nama Indonesia, nama Latin, nama Inggris, sinonim ilmiah, family, genus, kategori, dan deskripsi.
+1. Search bar untuk mencari nama Indonesia, nama Latin, nama Inggris, sinonim ilmiah, phylum, family, genus, kategori, dan deskripsi.
 2. Halaman katalog untuk menampilkan semua data flora-fauna yang sudah dimuat ke RDF.
 3. Filter kingdom: semua, Plantae, Animalia.
 4. Filter kategori: Mamalia, Burung, Reptil, Pohon, Palem, Anggrek, dan lainnya.
-5. Halaman hasil pencarian berisi nama Indonesia, nama Latin, nama Inggris, kingdom, family, genus, kategori, dan deskripsi ringkas.
+5. Halaman hasil pencarian berisi nama Indonesia, nama Latin, nama Inggris, kingdom, phylum, family, genus, kategori, dan deskripsi ringkas.
 6. Halaman detail spesies berisi seluruh data leksikon dan taksonomi.
 7. Relasi spesies terkait: satu genus dan satu family.
 8. Fitur bandingkan hubungan antarspesies.
@@ -476,33 +509,50 @@ WHERE {
 
 ```text
 flora-fauna-semantic-web/
-├── app.py
-├── Dockerfile
-├── docker-compose.yml
-├── requirements.txt
-├── README.md
-├── RANCANGAN_PROYEK.md
-├── data/
-│   ├── flora_fauna.csv
-│   ├── flora_fauna.ttl
-│   └── validation_report.csv
-├── ontology/
-│   └── ontology.ttl
-├── scripts/
-│   ├── build_validated_dataset.py
-│   ├── csv_to_rdf.py
-│   └── load_rdf_to_fuseki.py
-├── frontend/
-│   ├── package.json
-│   ├── index.html
-│   └── src/
-│       ├── App.jsx
-│       ├── main.jsx
-│       └── styles.css
-└── frontend/dist/
-    └── hasil build React untuk disajikan oleh Flask
+|-- backend/
+|   |-- app.py
+|   |-- config.py
+|   |-- queries.py
+|   |-- sparql_client.py
+|   |-- routes/
+|   `-- services/
+|-- data.csv/
+|   |-- seed/
+|   |   `-- species_seed.csv
+|   |-- raw/
+|   |   |-- gbif_results.csv
+|   |   `-- wikidata_results.csv
+|   `-- processed/
+|       `-- species_enriched.csv
+|-- rdf/
+|   `-- flora_fauna.ttl
+|-- ontology/
+|   `-- ontology.ttl
+|-- python_script/
+|   |-- common/
+|   |-- scrape/
+|   |   |-- main.py
+|   |   |-- api_clients.py
+|   |   `-- build_dataset.py
+|   |-- rdf/
+|   |   |-- main.py
+|   |   `-- converter.py
+|   |-- load/
+|   |   |-- main.py
+|   |   `-- fuseki_loader.py
+|   `-- refresh/
+|       `-- main.py
+|-- frontend/
+|   |-- package.json
+|   |-- index.html
+|   |-- src/
+|   `-- dist/
+|-- Dockerfile
+|-- docker-compose.yml
+|-- requirements.txt
+|-- README.md
+`-- RANCANGAN_PROYEK.md
 ```
-
 ## 21. File `requirements.txt`
 
 ```text
@@ -512,9 +562,9 @@ rdflib
 requests
 ```
 
-## 22. Kode Flask `app.py`
+## 22. Kode Flask `backend/app.py`
 
-Kode lengkap tersedia di `app.py`. Aplikasi mengirim query ke:
+Entry point Flask tersedia di `backend/app.py`. Route API berada di `backend/routes/`, service pengolahan data berada di `backend/services/`, dan query SPARQL berada di `backend/queries.py`. Aplikasi mengirim query ke:
 
 ```text
 http://localhost:3030/flora-fauna/sparql
@@ -556,10 +606,10 @@ Frontend menggunakan React + Vite agar tampilan lebih modern, clean, dan mudah d
 
 ```text
 React UI
-→ Flask API
-→ SPARQLWrapper
-→ Apache Jena Fuseki
-→ RDF Knowledge Graph
+-> Flask API
+-> SPARQLWrapper
+-> Apache Jena Fuseki
+-> RDF Knowledge Graph
 ```
 
 Fitur visualisasi knowledge graph menggunakan Cytoscape.js. Node merepresentasikan spesies dan takson, sedangkan edge merepresentasikan RDF property seperti `hasFamily`, `hasGenus`, dan `hasCategory`.
@@ -572,10 +622,10 @@ Alur kerja:
 
 ```text
 User membuka detail spesies atau compare
-→ Flask menjalankan query SPARQL ke Fuseki
-→ hasil SPARQL dikonversi menjadi konteks JSON
-→ Gemini menerima konteks JSON
-→ Gemini membuat penjelasan natural dalam bahasa Indonesia
+-> Flask menjalankan query SPARQL ke Fuseki
+-> hasil SPARQL dikonversi menjadi konteks JSON
+-> Gemini menerima konteks JSON
+-> Gemini membuat penjelasan natural dalam bahasa Indonesia
 ```
 
 Tombol yang tersedia:
@@ -607,7 +657,7 @@ Tulis jawaban ringkas, jelas, dan cocok untuk presentasi proyek Semantic Web.
 Contoh output AI untuk kucing dan harimau:
 
 ```text
-Berdasarkan hasil SPARQL, Kucing (Felis catus) dan Harimau (Panthera tigris) sama-sama berada pada kingdom Animalia, kelas Mammalia, ordo Carnivora, dan family Felidae. Keduanya berbeda genus, yaitu Felis dan Panthera. Kesimpulannya, hubungan keduanya dekat karena berada dalam family yang sama, tetapi tidak sangat dekat karena genus berbeda.
+Berdasarkan hasil SPARQL, Kucing (Felis catus) dan Harimau (Panthera tigris) sama-sama berada pada kingdom Animalia, phylum Chordata, kelas Mammalia, ordo Carnivora, dan family Felidae. Keduanya berbeda genus, yaitu Felis dan Panthera. Kesimpulannya, hubungan keduanya dekat karena berada dalam family yang sama, tetapi tidak sangat dekat karena genus berbeda.
 ```
 
 Bagian ini dapat dijelaskan sebagai bentuk sederhana **Knowledge Graph-based RAG**: RDF/SPARQL menjadi retrieval layer yang menyediakan fakta terstruktur, sedangkan Gemini menjadi natural language explanation layer. LLM tidak dipakai untuk membuat dataset utama.
@@ -632,12 +682,12 @@ Jika data CSV/RDF berubah setelah container pernah berjalan:
 docker compose run --rm rdf-loader
 ```
 
-Perintah tersebut menjalankan `scripts/refresh_data.py`, yaitu:
+Perintah tersebut menjalankan `python_script/refresh/main.py`, yaitu:
 
 ```text
-CSV
-→ generate ulang RDF Turtle
-→ upload RDF + ontology ke Fuseki
+data.csv/processed/species_enriched.csv
+-> generate ulang rdf/flora_fauna.ttl
+-> upload RDF + ontology ke Fuseki
 ```
 
 3. Buka website:
@@ -658,9 +708,9 @@ Mode alternatif untuk menjalankan Flask secara lokal:
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-python scripts/csv_to_rdf.py
+python python_script/rdf/main.py
 docker compose up -d fuseki rdf-loader
-python app.py
+python backend/app.py
 ```
 
 ## 26. Pemenuhan Requirement Proyek
@@ -682,10 +732,10 @@ Metode penelitian/proyek terdiri dari beberapa tahap:
    Data nama flora dan fauna Indonesia dikumpulkan dalam format CSV. Data meliputi nama ilmiah, nama Indonesia, nama Inggris, sinonim ilmiah, taksonomi, habitat, deskripsi, status endemik, dan sumber data.
 
 2. **Perancangan Ontologi**  
-   Ontologi dirancang untuk merepresentasikan konsep leksikon spesies dan taksonomi. Class yang digunakan meliputi `SpeciesEntry`, `FloraEntry`, `FaunaEntry`, `Kingdom`, `TaxonomicClass`, `Order`, `Family`, `Genus`, `Category`, dan `Habitat`.
+   Ontologi dirancang untuk merepresentasikan konsep leksikon spesies dan taksonomi. Class yang digunakan meliputi `SpeciesEntry`, `FloraEntry`, `FaunaEntry`, `Kingdom`, `Phylum`, `TaxonomicClass`, `Order`, `Family`, `Genus`, `Category`, dan `Habitat`.
 
 3. **Konversi CSV ke RDF**  
-   Data CSV dikonversi menjadi RDF Turtle menggunakan Python dan library RDFLib. Setiap baris CSV menjadi resource spesies, sedangkan kingdom, kelas, ordo, family, genus, kategori, dan habitat menjadi resource terhubung.
+   Data CSV dikonversi menjadi RDF Turtle menggunakan Python dan library RDFLib. Setiap baris CSV menjadi resource spesies, sedangkan kingdom, phylum, kelas, ordo, family, genus, kategori, dan habitat menjadi resource terhubung.
 
 4. **Pembangunan SPARQL Endpoint**  
    File RDF dan ontologi dimuat ke Apache Jena Fuseki. Endpoint SPARQL digunakan untuk menjalankan query pencarian dan relasi antarspesies.
@@ -722,6 +772,7 @@ Kucing:
 
 - Nama ilmiah: `Felis catus`
 - Kingdom: `Animalia`
+- Phylum: `Chordata`
 - Kelas: `Mammalia`
 - Ordo: `Carnivora`
 - Family: `Felidae`
@@ -731,6 +782,7 @@ Harimau:
 
 - Nama ilmiah: `Panthera tigris`
 - Kingdom: `Animalia`
+- Phylum: `Chordata`
 - Kelas: `Mammalia`
 - Ordo: `Carnivora`
 - Family: `Felidae`
@@ -738,7 +790,7 @@ Harimau:
 
 Kesimpulan:
 
-Kucing dan harimau sama-sama berada pada kingdom Animalia, kelas Mammalia, ordo Carnivora, dan family Felidae. Namun, keduanya berbeda genus. Berdasarkan aturan sistem, relasi kedekatannya adalah **dekat** karena berada dalam family yang sama, tetapi belum **sangat dekat** karena genus berbeda.
+Kucing dan harimau sama-sama berada pada kingdom Animalia, phylum Chordata, kelas Mammalia, ordo Carnivora, dan family Felidae. Namun, keduanya berbeda genus. Berdasarkan aturan sistem, relasi kedekatannya adalah **dekat** karena berada dalam family yang sama, tetapi belum **sangat dekat** karena genus berbeda.
 
 ## Potensi Pengembangan ke LLM/RAG
 
@@ -748,9 +800,9 @@ Alur pengembangan RAG:
 
 ```text
 Detail spesies atau compare
-→ query SPARQL ke knowledge graph
-→ hasil RDF/SPARQL sebagai konteks JSON
-→ Gemini menyusun jawaban natural language
+-> query SPARQL ke knowledge graph
+-> hasil RDF/SPARQL sebagai konteks JSON
+-> Gemini menyusun jawaban natural language
 ```
 
 Batasan penting: Gemini tidak boleh menghasilkan data utama, tidak boleh menambah fakta dari luar konteks, dan tidak boleh menggantikan hasil query SPARQL.
@@ -763,3 +815,4 @@ Gunakan referensi berikut untuk validasi dataset 100 spesies:
 2. GBIF Species API: https://techdocs.gbif.org/en/openapi/
 3. World Flora Online Plant List: https://wfoplantlist.org/
 4. Catalogue of Life: https://www.catalogueoflife.org/
+
