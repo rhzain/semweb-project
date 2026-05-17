@@ -33,6 +33,10 @@ ff:Kingdom a owl:Class ;
     rdfs:subClassOf ff:Taxon ;
     rdfs:label "Kingdom" .
 
+ff:Phylum a owl:Class ;
+    rdfs:subClassOf ff:Taxon ;
+    rdfs:label "Phylum" .
+
 ff:TaxonomicClass a owl:Class ;
     rdfs:subClassOf ff:Taxon ;
     rdfs:label "Taxonomic Class" .
@@ -53,13 +57,15 @@ ff:Category a owl:Class ;
     rdfs:label "Lexicon Category" ;
     rdfs:comment "Kategori leksikon seperti Mamalia, Burung, Pohon, Palem, atau Anggrek." .
 
-ff:Habitat a owl:Class ;
-    rdfs:label "Habitat" .
-
 ff:hasKingdom a owl:ObjectProperty ;
     rdfs:domain ff:SpeciesEntry ;
     rdfs:range ff:Kingdom ;
     rdfs:label "has kingdom" .
+
+ff:hasPhylum a owl:ObjectProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range ff:Phylum ;
+    rdfs:label "has phylum" .
 
 ff:hasTaxonomicClass a owl:ObjectProperty ;
     rdfs:domain ff:SpeciesEntry ;
@@ -86,11 +92,6 @@ ff:hasCategory a owl:ObjectProperty ;
     rdfs:range ff:Category ;
     rdfs:label "has category" .
 
-ff:hasHabitat a owl:ObjectProperty ;
-    rdfs:domain ff:SpeciesEntry ;
-    rdfs:range ff:Habitat ;
-    rdfs:label "has habitat" .
-
 ff:taxonomicallyRelatedTo a owl:ObjectProperty ;
     rdfs:domain ff:SpeciesEntry ;
     rdfs:range ff:SpeciesEntry ;
@@ -101,6 +102,12 @@ ff:sameKingdomAs a owl:ObjectProperty ;
     rdfs:domain ff:SpeciesEntry ;
     rdfs:range ff:SpeciesEntry ;
     rdfs:label "same kingdom as" .
+
+ff:samePhylumAs a owl:ObjectProperty ;
+    rdfs:subPropertyOf ff:taxonomicallyRelatedTo ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range ff:SpeciesEntry ;
+    rdfs:label "same phylum as" .
 
 ff:sameClassAs a owl:ObjectProperty ;
     rdfs:subPropertyOf ff:taxonomicallyRelatedTo ;
@@ -151,16 +158,6 @@ ff:scientificSynonym a owl:DatatypeProperty ;
     rdfs:range xsd:string ;
     rdfs:label "scientific synonym" .
 
-ff:description a owl:DatatypeProperty ;
-    rdfs:domain ff:SpeciesEntry ;
-    rdfs:range xsd:string ;
-    rdfs:label "description" .
-
-ff:endemismStatus a owl:DatatypeProperty ;
-    rdfs:domain ff:SpeciesEntry ;
-    rdfs:range xsd:string ;
-    rdfs:label "endemism status" .
-
 ff:sourceData a owl:DatatypeProperty ;
     rdfs:domain ff:SpeciesEntry ;
     rdfs:range xsd:string ;
@@ -170,4 +167,3 @@ ff:searchText a owl:DatatypeProperty ;
     rdfs:domain ff:SpeciesEntry ;
     rdfs:range xsd:string ;
     rdfs:label "search text" .
-
