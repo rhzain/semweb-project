@@ -39,8 +39,6 @@ services:
       GEMINI_API_KEY: ${GEMINI_API_KEY:-}
       GEMINI_BASE_URL: ${GEMINI_BASE_URL:-https://generativelanguage.googleapis.com/v1beta}
       GEMINI_MODEL: ${GEMINI_MODEL:-gemini-2.5-flash}
-    volumes:
-      - ./frontend/dist:/app/frontend/dist:ro
     depends_on:
       rdf-loader:
         condition: service_completed_successfully
