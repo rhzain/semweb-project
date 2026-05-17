@@ -1,30 +1,22 @@
 from __future__ import annotations
 
-import argparse
 import csv
-import re
-import unicodedata
 from pathlib import Path
 
 from rdflib import Graph, Literal, Namespace, RDF, RDFS
 
+from common.paths import DATASET_CSV, RDF_TURTLE
+from common.text import slugify
 
-BASE_DIR = Path(__file__).resolve().parents[1]
-DEFAULT_CSV = BASE_DIR / "data" / "flora_fauna.csv"
-DEFAULT_OUTPUT = BASE_DIR / "data" / "flora_fauna.ttl"
+DEFAULT_CSV = DATASET_CSV
+DEFAULT_OUTPUT = RDF_TURTLE
 
 FF = Namespace("http://example.org/flora-fauna/ontology#")
 DATA = Namespace("http://example.org/flora-fauna/resource/")
 
 
-def slugify(value: str) -> str:
-    normalized = unicodedata.normalize("NFKD", value)
-    ascii_value = normalized.encode("ascii", "ignore").decode("ascii")
-    slug = re.sub(r"[^A-Za-z0-9]+", "_", ascii_value.lower()).strip("_")
-    return slug or "unknown"
-
-
 def add_taxon(graph: Graph, value: str, taxon_type, prefix: str):
+    """Create or reuse a taxon resource for a repeated taxonomy value."""
     uri = DATA[f"{prefix}_{slugify(value)}"]
     graph.add((uri, RDF.type, taxon_type))
     graph.add((uri, RDFS.label, Literal(value)))
@@ -32,25 +24,25 @@ def add_taxon(graph: Graph, value: str, taxon_type, prefix: str):
 
 
 def row_search_text(row: dict[str, str]) -> str:
+    """Combine searchable fields into one lowercase RDF literal."""
     fields = [
         "nama_latin",
         "nama_indonesia",
         "nama_inggris",
         "kingdom",
+        "phylum",
         "kelas",
         "ordo",
         "family",
         "genus",
         "kategori",
-        "habitat",
-        "deskripsi",
         "sinonim_ilmiah",
-        "status_endemik",
     ]
     return " ".join(row.get(field, "") for field in fields if row.get(field, "")).lower()
 
 
 def convert_csv_to_rdf(csv_path: Path, output_path: Path) -> None:
+    """Convert the validated CSV dataset into RDF Turtle triples."""
     graph = Graph()
     graph.bind("ff", FF)
     graph.bind("data", DATA)
@@ -75,8 +67,6 @@ def convert_csv_to_rdf(csv_path: Path, output_path: Path) -> None:
             graph.add((species, FF.scientificName, Literal(row["nama_latin"])))
             graph.add((species, FF.indonesianName, Literal(row["nama_indonesia"], lang="id")))
             graph.add((species, FF.englishName, Literal(row["nama_inggris"], lang="en")))
-            graph.add((species, FF.description, Literal(row["deskripsi"], lang="id")))
-            graph.add((species, FF.endemismStatus, Literal(row["status_endemik"], lang="id")))
             graph.add((species, FF.sourceData, Literal(row["sumber_data"])))
             graph.add((species, FF.searchText, Literal(row_search_text(row))))
 
@@ -90,12 +80,12 @@ def convert_csv_to_rdf(csv_path: Path, output_path: Path) -> None:
 
             taxonomy = [
                 ("kingdom", FF.Kingdom, "kingdom", FF.hasKingdom),
+                ("phylum", FF.Phylum, "phylum", FF.hasPhylum),
                 ("kelas", FF.TaxonomicClass, "class", FF.hasTaxonomicClass),
                 ("ordo", FF.Order, "order", FF.hasOrder),
                 ("family", FF.Family, "family", FF.hasFamily),
                 ("genus", FF.Genus, "genus", FF.hasGenus),
                 ("kategori", FF.Category, "category", FF.hasCategory),
-                ("habitat", FF.Habitat, "habitat", FF.hasHabitat),
             ]
 
             for csv_column, rdf_class, uri_prefix, rdf_property in taxonomy:
@@ -105,17 +95,3 @@ def convert_csv_to_rdf(csv_path: Path, output_path: Path) -> None:
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     graph.serialize(destination=output_path, format="turtle")
-
-
-def main() -> None:
-    parser = argparse.ArgumentParser(description="Convert flora-fauna CSV data to RDF Turtle.")
-    parser.add_argument("--csv", type=Path, default=DEFAULT_CSV, help="Input CSV path.")
-    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT, help="Output Turtle path.")
-    args = parser.parse_args()
-
-    convert_csv_to_rdf(args.csv, args.output)
-    print(f"RDF Turtle generated: {args.output}")
-
-
-if __name__ == "__main__":
-    main()
