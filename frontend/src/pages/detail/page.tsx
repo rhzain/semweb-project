@@ -9,8 +9,8 @@ import {
 } from "@/components/detail/detail-information";
 import { RelatedSpecies } from "@/components/detail/related-species";
 import { AIExplanationPanel } from "@/components/shared/ai-explanation-panel";
+import { FullScreenLoader } from "@/components/shared/full-screen-loader";
 import { QueryPanel } from "@/components/shared/query-panel";
-import { StatusLine } from "@/components/shared/status-line";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import {
   Empty,
@@ -64,7 +64,7 @@ function DetailPage() {
   }
 
   if (loading) {
-    return <StatusLine count={0} loading />;
+    return <FullScreenLoader label="Memuat detail spesies..." />;
   }
 
   if (error) {
@@ -97,6 +97,9 @@ function DetailPage() {
 
   return (
     <div className="flex flex-col gap-7">
+      {aiLoading ? (
+        <FullScreenLoader label="Menyiapkan penjelasan AI..." />
+      ) : null}
       <nav
         aria-label="Breadcrumb"
         className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground"

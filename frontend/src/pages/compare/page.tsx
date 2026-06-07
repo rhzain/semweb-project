@@ -5,6 +5,7 @@ import { CompareControls } from "@/components/compare/compare-controls";
 import { ComparisonSummary } from "@/components/compare/comparison-summary";
 import { ComparisonTable } from "@/components/compare/comparison-table";
 import { AIExplanationPanel } from "@/components/shared/ai-explanation-panel";
+import { FullScreenLoader } from "@/components/shared/full-screen-loader";
 import { PageHeading } from "@/components/shared/page-heading";
 import { QueryPanel } from "@/components/shared/query-panel";
 import { StatusLine } from "@/components/shared/status-line";
@@ -20,11 +21,9 @@ function ComparePage() {
   const [params, setParams] = useSearchParams();
   const speciesA = params.get("species_a") || "kucing";
   const speciesB = params.get("species_b") || "harimau";
-  const { data: optionsData } = useApi<SpeciesOptionsResponse>(
-    "/api/species-options",
-    { items: [] },
-  );
-  const { data, loading, error } = useApi<CompareResponse>(
+  const { data: optionsData, initialLoading: optionsInitialLoading } =
+    useApi<SpeciesOptionsResponse>("/api/species-options", { items: [] });
+  const { data, loading, initialLoading, error } = useApi<CompareResponse>(
     `/api/compare?species_a=${speciesA}&species_b=${speciesB}`,
     {
       comparison: [],
@@ -70,8 +69,15 @@ function ComparePage() {
     }
   }
 
+  if (initialLoading || optionsInitialLoading) {
+    return <FullScreenLoader label="Memuat perbandingan spesies..." />;
+  }
+
   return (
     <div className="flex flex-col gap-6">
+      {aiLoading ? (
+        <FullScreenLoader label="Menyiapkan penjelasan perbandingan..." />
+      ) : null}
       <PageHeading
         description="Sistem menilai kedekatan dari kesamaan kingdom, phylum, kelas, ordo, family, dan genus."
         eyebrow="Relasi Taksonomi"

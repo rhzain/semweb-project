@@ -6,12 +6,14 @@ import type { ApiPayload } from "@/types/api";
 interface ApiState<T> {
   data: T;
   loading: boolean;
+  initialLoading: boolean;
   error: string;
 }
 
 export function useApi<T extends ApiPayload>(path: string, fallback: T): ApiState<T> {
   const [data, setData] = useState<T>(fallback);
   const [loading, setLoading] = useState(true);
+  const [hasLoaded, setHasLoaded] = useState(false);
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -24,6 +26,7 @@ export function useApi<T extends ApiPayload>(path: string, fallback: T): ApiStat
       .then((result) => {
         setData(result);
         setError(result.error ?? "");
+        setHasLoaded(true);
       })
       .catch((requestError: unknown) => {
         if (requestError instanceof DOMException && requestError.name === "AbortError") {
@@ -43,5 +46,10 @@ export function useApi<T extends ApiPayload>(path: string, fallback: T): ApiStat
     return () => controller.abort();
   }, [path]);
 
-  return { data, loading, error };
+  return {
+    data,
+    loading,
+    initialLoading: loading && !hasLoaded,
+    error,
+  };
 }

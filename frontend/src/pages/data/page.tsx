@@ -2,10 +2,10 @@ import { useDeferredValue } from "react";
 import { useSearchParams } from "react-router-dom";
 
 import { DataFilters } from "@/components/data/data-filters";
+import { FullScreenLoader } from "@/components/shared/full-screen-loader";
 import { QueryPanel } from "@/components/shared/query-panel";
 import { SpeciesGrid } from "@/components/shared/species-grid";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Spinner } from "@/components/ui/spinner";
 import { useApi } from "@/hooks/use-api";
 import type { CategoriesResponse, SpeciesListResponse } from "@/types/api";
 
@@ -16,13 +16,14 @@ function DataPage() {
   const category = params.get("category") || "";
   const deferredParams = useDeferredValue(params.toString());
 
-  const { data, loading, error } = useApi<SpeciesListResponse>(
+  const { data, loading, initialLoading, error } = useApi<SpeciesListResponse>(
     `/api/species?${deferredParams}`,
     { items: [], sparql: "" },
   );
-  const { data: categoryData } = useApi<CategoriesResponse>("/api/categories", {
-    categories: [],
-  });
+  const { data: categoryData, initialLoading: categoriesInitialLoading } =
+    useApi<CategoriesResponse>("/api/categories", {
+      categories: [],
+    });
 
   function updateParam(key: string, value: string) {
     const next = new URLSearchParams(params);
@@ -40,6 +41,10 @@ function DataPage() {
     label: item,
     value: item,
   }));
+
+  if (initialLoading || categoriesInitialLoading) {
+    return <FullScreenLoader label="Memuat katalog spesies..." />;
+  }
 
   return (
     <div className="flex flex-col gap-10">
@@ -65,10 +70,7 @@ function DataPage() {
         <div className="flex min-w-0 flex-col gap-6">
           <div className="flex min-h-8 items-center text-sm text-muted-foreground">
             {loading ? (
-              <span className="inline-flex items-center gap-2">
-                <Spinner />
-                Memuat katalog...
-              </span>
+              <span>Memperbarui hasil...</span>
             ) : (
               <span>
                 Menampilkan{" "}

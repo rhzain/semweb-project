@@ -7,6 +7,7 @@ import {
   HomeSearchForm,
   type HomeSearchValues,
 } from "@/components/home/home-search-form";
+import { FullScreenLoader } from "@/components/shared/full-screen-loader";
 import { useApi } from "@/hooks/use-api";
 import type { CategoriesResponse, SpeciesListResponse } from "@/types/api";
 
@@ -17,13 +18,15 @@ const initialValues: HomeSearchValues = {
 function HomePage() {
   const navigate = useNavigate();
   const [values, setValues] = useState<HomeSearchValues>(initialValues);
-  const { data: categoryData } = useApi<CategoriesResponse>("/api/categories", {
-    categories: [],
-  });
-  const { data: speciesData } = useApi<SpeciesListResponse>("/api/species", {
-    items: [],
-    sparql: "",
-  });
+  const { data: categoryData, initialLoading: categoriesInitialLoading } =
+    useApi<CategoriesResponse>("/api/categories", {
+      categories: [],
+    });
+  const { data: speciesData, initialLoading: speciesInitialLoading } =
+    useApi<SpeciesListResponse>("/api/species", {
+      items: [],
+      sparql: "",
+    });
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -35,6 +38,10 @@ function HomePage() {
 
     const query = params.toString();
     navigate(query ? `/data?${query}` : "/data");
+  }
+
+  if (categoriesInitialLoading || speciesInitialLoading) {
+    return <FullScreenLoader label="Memuat leksikon flora dan fauna..." />;
   }
 
   return (

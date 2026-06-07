@@ -2,6 +2,7 @@ import { useSearchParams } from "react-router-dom";
 
 import { GraphCanvas } from "@/components/graph/graph-canvas";
 import { GraphToolbar } from "@/components/graph/graph-toolbar";
+import { FullScreenLoader } from "@/components/shared/full-screen-loader";
 import { PageHeading } from "@/components/shared/page-heading";
 import { QueryPanel } from "@/components/shared/query-panel";
 import { StatusLine } from "@/components/shared/status-line";
@@ -11,11 +12,9 @@ import type { GraphResponse, SpeciesOptionsResponse } from "@/types/api";
 function GraphPage() {
   const [params, setParams] = useSearchParams();
   const speciesId = params.get("species_id") || "";
-  const { data: optionsData } = useApi<SpeciesOptionsResponse>(
-    "/api/species-options",
-    { items: [] },
-  );
-  const { data, loading, error } = useApi<GraphResponse>(
+  const { data: optionsData, initialLoading: optionsInitialLoading } =
+    useApi<SpeciesOptionsResponse>("/api/species-options", { items: [] });
+  const { data, loading, initialLoading, error } = useApi<GraphResponse>(
     `/api/graph${speciesId ? `?species_id=${speciesId}` : ""}`,
     {
       graph: { nodes: [], edges: [] },
@@ -33,6 +32,10 @@ function GraphPage() {
     }
 
     setParams(next, { replace: true });
+  }
+
+  if (initialLoading || optionsInitialLoading) {
+    return <FullScreenLoader label="Memuat knowledge graph..." />;
   }
 
   return (
