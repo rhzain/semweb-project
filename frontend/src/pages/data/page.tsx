@@ -48,11 +48,11 @@ function DataPage() {
 
   return (
     <div className="flex flex-col gap-10">
-      <header className="flex max-w-3xl flex-col gap-3">
+      <header className="flex flex-col gap-3">
         <h1 className="font-heading text-4xl font-bold tracking-[-0.045em] sm:text-5xl">
           Katalog Spesies
         </h1>
-        <p className="text-base leading-7 text-muted-foreground sm:text-lg">
+        <p className="w-full text-base leading-7 text-muted-foreground sm:text-lg">
           Jelajahi flora dan fauna Indonesia melalui data leksikon, taksonomi,
           dan relasi yang tersimpan dalam knowledge graph.
         </p>
