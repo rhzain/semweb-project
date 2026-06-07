@@ -36,12 +36,14 @@ data.csv/seed/species_seed.csv         Seed daftar spesies yang akan dicari ke A
 data.csv/raw/gbif_results.csv          Hasil raw enrichment dari GBIF
 data.csv/raw/wikidata_results.csv      Hasil raw enrichment dari Wikidata
 data.csv/processed/species_enriched.csv Dataset final 100 entri hasil enrichment
+data.csv/ui/species_content.csv         Konten gambar dan deskripsi khusus UI
 rdf/flora_fauna.ttl                    RDF Turtle hasil konversi
 ontology/ontology.ttl                  Ontologi proyek
 python_script/scrape/main.py           Entry point scrape/enrichment CSV
 python_script/rdf/main.py              Entry point konversi CSV ke RDF
 python_script/load/main.py             Entry point upload RDF ke Fuseki
 python_script/refresh/main.py          Entry point regenerate RDF dan upload
+python_script/ui_content/main.py       Generator CSV gambar/deskripsi khusus UI
 frontend/                              React + Vite frontend
 frontend/src/pages/*/page.tsx          Page composer untuk setiap route
 frontend/src/components/<page>/        Section/component khusus per halaman
@@ -210,9 +212,11 @@ File pendukung:
 - `data.csv/raw/gbif_results.csv`: hasil raw GBIF, termasuk accepted scientific name, GBIF key, URL GBIF, nama umum, deskripsi, habitat, life form, status taksonomi, rank, kingdom, phylum, kelas, ordo, family, dan genus
 - `data.csv/raw/wikidata_results.csv`: hasil raw Wikidata, termasuk URL Wikidata, label, deskripsi, habitat, endemic to, dan taksonomi bila tersedia
 - `data.csv/processed/species_enriched.csv`: dataset utama yang dipakai untuk RDF
+- `data.csv/ui/species_content.csv`: enrichment terpisah untuk gambar, sumber gambar, dan deskripsi UI; file ini tidak ditimpa proses scrape
 - `rdf/flora_fauna.ttl`: hasil RDF Turtle dari CSV
 - `python_script/scrape/main.py`: script utama scrape/enrichment dataset
 - `python_script/rdf/main.py`: script utama konversi RDF
+- `python_script/ui_content/main.py`: mengambil gambar Wikimedia Commons/GBIF dan membuat deskripsi dari field taksonomi tervalidasi
 
 Untuk membangun ulang dataset dari sumber terbuka, koneksi internet diperlukan:
 
