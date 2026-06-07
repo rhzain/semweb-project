@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Network } from "lucide-react";
 
-import { Card } from "@/components/ui/card";
 import {
   Empty,
   EmptyDescription,
@@ -42,6 +41,8 @@ export function GraphCanvas({ graph }: GraphCanvasProps) {
             selector: "node",
             style: {
               "background-color": "#65736d",
+              "border-color": "#4f5d57",
+              "border-width": 1,
               color: "#17201c",
               label: "data(label)",
               "font-size": 11,
@@ -56,7 +57,8 @@ export function GraphCanvas({ graph }: GraphCanvasProps) {
           {
             selector: 'node[type = "Species"]',
             style: {
-              "background-color": "#247255",
+              "background-color": "#b42318",
+              "border-color": "#7f1d1d",
               shape: "round-rectangle",
               width: 44,
               height: 30,
@@ -67,8 +69,8 @@ export function GraphCanvas({ graph }: GraphCanvasProps) {
           {
             selector: 'node[focus = "true"]',
             style: {
-              "background-color": "#c07845",
-              "border-color": "#75411f",
+              "background-color": "#991b1b",
+              "border-color": "#fecaca",
               "border-width": 3,
             },
           },
@@ -76,6 +78,7 @@ export function GraphCanvas({ graph }: GraphCanvasProps) {
             selector: 'node[type = "Category"]',
             style: {
               "background-color": "#7767a8",
+              "border-color": "#5b4b8a",
             },
           },
           {
@@ -111,7 +114,7 @@ export function GraphCanvas({ graph }: GraphCanvasProps) {
 
   if (!graph.nodes.length) {
     return (
-      <Empty className="border bg-card">
+      <Empty className="rounded-sm border border-dashed bg-transparent">
         <EmptyHeader>
           <EmptyMedia variant="icon">
             <Network />
@@ -126,11 +129,11 @@ export function GraphCanvas({ graph }: GraphCanvasProps) {
   }
 
   return (
-    <Card className="p-0">
+    <section className="overflow-hidden rounded-sm border bg-card">
       <div
         className="h-[min(70vh,680px)] min-h-[480px] w-full"
         ref={containerRef}
       />
-    </Card>
+    </section>
   );
 }
