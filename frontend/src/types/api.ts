@@ -15,6 +15,10 @@ export interface SpeciesListItem {
   familyLabel: string;
   genusLabel: string;
   relation?: string;
+  sourceData?: string;
+  description?: string;
+  imageUrl?: string;
+  imageSource?: string;
 }
 
 export interface SpeciesDetail extends SpeciesListItem {
@@ -23,6 +27,7 @@ export interface SpeciesDetail extends SpeciesListItem {
   orderLabel: string;
   scientificSynonyms?: string;
   sourceData: string;
+  descriptionSource?: string;
 }
 
 export interface SpeciesOption {

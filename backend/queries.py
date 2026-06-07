@@ -51,13 +51,14 @@ def build_search_query(q: str = "", kingdom: str = "", category: str = "", limit
 
 SELECT DISTINCT ?id ?scientificName ?indonesianName ?englishName
        ?kingdomLabel ?phylumLabel ?classLabel ?orderLabel ?familyLabel ?genusLabel
-       ?categoryLabel
+       ?categoryLabel ?sourceData ?description ?imageUrl ?imageSource
 WHERE {{
   ?species a ff:SpeciesEntry ;
            ff:entryId ?id ;
            ff:scientificName ?scientificName ;
            ff:indonesianName ?indonesianName ;
            ff:englishName ?englishName ;
+           ff:sourceData ?sourceData ;
            ff:searchText ?searchText ;
            ff:hasKingdom/rdfs:label ?kingdomLabel ;
            ff:hasPhylum/rdfs:label ?phylumLabel ;
@@ -66,6 +67,9 @@ WHERE {{
            ff:hasFamily/rdfs:label ?familyLabel ;
            ff:hasGenus/rdfs:label ?genusLabel ;
            ff:hasCategory/rdfs:label ?categoryLabel .
+  OPTIONAL {{ ?species ff:description ?description . }}
+  OPTIONAL {{ ?species ff:imageUrl ?imageUrl . }}
+  OPTIONAL {{ ?species ff:imageSource ?imageSource . }}
   {"".join(filters)}
 }}
 ORDER BY LCASE(STR(?indonesianName))
@@ -112,7 +116,7 @@ def detail_query(species_id: str) -> str:
 
 SELECT ?id ?scientificName ?indonesianName ?englishName
        ?kingdomLabel ?phylumLabel ?classLabel ?orderLabel ?familyLabel ?genusLabel
-       ?categoryLabel ?sourceData
+       ?categoryLabel ?sourceData ?description ?descriptionSource ?imageUrl ?imageSource
        (GROUP_CONCAT(DISTINCT ?synonym; separator=", ") AS ?scientificSynonyms)
 WHERE {{
   data:{species_id} a ff:SpeciesEntry ;
@@ -129,10 +133,14 @@ WHERE {{
            ff:hasGenus/rdfs:label ?genusLabel ;
            ff:hasCategory/rdfs:label ?categoryLabel .
   OPTIONAL {{ data:{species_id} ff:scientificSynonym ?synonym . }}
+  OPTIONAL {{ data:{species_id} ff:description ?description . }}
+  OPTIONAL {{ data:{species_id} ff:descriptionSource ?descriptionSource . }}
+  OPTIONAL {{ data:{species_id} ff:imageUrl ?imageUrl . }}
+  OPTIONAL {{ data:{species_id} ff:imageSource ?imageSource . }}
 }}
 GROUP BY ?id ?scientificName ?indonesianName ?englishName
          ?kingdomLabel ?phylumLabel ?classLabel ?orderLabel ?familyLabel ?genusLabel
-         ?categoryLabel ?sourceData
+         ?categoryLabel ?sourceData ?description ?descriptionSource ?imageUrl ?imageSource
 """
 
 
@@ -142,7 +150,8 @@ def related_query(species_id: str) -> str:
 {PREFIXES}
 
 SELECT DISTINCT ?id ?indonesianName ?scientificName ?englishName
-       ?kingdomLabel ?familyLabel ?genusLabel ?categoryLabel ?relation
+       ?kingdomLabel ?familyLabel ?genusLabel ?categoryLabel ?sourceData
+       ?description ?imageUrl ?imageSource ?relation
 WHERE {{
   data:{species_id} ff:hasFamily ?family ;
                     ff:hasGenus ?genus .
@@ -151,11 +160,15 @@ WHERE {{
            ff:indonesianName ?indonesianName ;
            ff:scientificName ?scientificName ;
            ff:englishName ?englishName ;
+           ff:sourceData ?sourceData ;
            ff:hasKingdom/rdfs:label ?kingdomLabel ;
            ff:hasFamily ?family ;
            ff:hasFamily/rdfs:label ?familyLabel ;
            ff:hasGenus/rdfs:label ?genusLabel ;
            ff:hasCategory/rdfs:label ?categoryLabel .
+  OPTIONAL {{ ?species ff:description ?description . }}
+  OPTIONAL {{ ?species ff:imageUrl ?imageUrl . }}
+  OPTIONAL {{ ?species ff:imageSource ?imageSource . }}
   FILTER(?species != data:{species_id})
   BIND(IF(EXISTS {{ ?species ff:hasGenus ?genus }}, "Satu genus", "Satu family") AS ?relation)
 }}
