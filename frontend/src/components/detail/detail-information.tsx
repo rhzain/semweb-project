@@ -1,12 +1,5 @@
-import { BookOpen, Network } from "lucide-react";
+import { BookOpen, ExternalLink, Network } from "lucide-react";
 
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import type { SpeciesDetail } from "@/types/api";
 
 interface DetailInformationProps {
@@ -23,27 +16,67 @@ export function LexiconInformation({ item }: DetailInformationProps) {
   ];
 
   return (
-    <Card>
-      <CardHeader className="grid grid-cols-[auto_1fr] items-center gap-3">
-        <span className="flex size-9 items-center justify-center rounded-lg bg-secondary text-primary">
+    <section className="flex flex-col gap-6">
+      <div className="flex items-center gap-3">
+        <span className="flex size-8 items-center justify-center text-primary">
           <BookOpen />
         </span>
-        <CardTitle className="text-xl">Entri Leksikon</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <dl className="flex flex-col">
-          {rows.map(([label, value], index) => (
-            <div key={label}>
-              {index ? <Separator className="my-4" /> : null}
-              <dt className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+        <h2 className="text-xl font-semibold tracking-tight">Entri Leksikon</h2>
+      </div>
+      <dl className="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-[160px_1fr]">
+        {rows.map(([label, value]) => {
+          const isUrl = typeof value === "string" && value.startsWith("http");
+          let content: React.ReactNode = value;
+
+          if (label === "Sumber data" && typeof value === "string" && value.includes("http")) {
+            const parts = value.split(";").map((p) => p.trim()).filter(Boolean);
+            content = (
+              <div className="flex flex-wrap items-center gap-4">
+                {parts.map((part) => {
+                  const match = part.match(/^(.*?):\s*(https?:\/\/[^\s]+)$/);
+                  if (match) {
+                    return (
+                      <a
+                        key={match[2]}
+                        className="inline-flex items-center gap-1.5 font-medium text-primary hover:underline"
+                        href={match[2]}
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        {match[1]}
+                        <ExternalLink className="size-3.5" />
+                      </a>
+                    );
+                  }
+                  return <span key={part}>{part}</span>;
+                })}
+              </div>
+            );
+          } else if (isUrl) {
+            content = (
+              <a
+                className="inline-flex items-center gap-1.5 font-medium text-primary hover:underline"
+                href={value as string}
+                rel="noreferrer"
+                target="_blank"
+              >
+                Kunjungi tautan sumber
+                <ExternalLink className="size-3.5" />
+              </a>
+            );
+          }
+
+          return (
+            <div className="grid gap-1.5 sm:contents" key={label}>
+              <dt className="text-sm font-semibold text-muted-foreground">
                 {label}
               </dt>
-              <dd className="mt-1 break-words text-sm leading-6">{value}</dd>
+              <dd className="break-words text-sm leading-6">{content}</dd>
             </div>
-          ))}
-        </dl>
-      </CardContent>
-    </Card>
+          );
+        })}
+      </dl>
+    </section>
   );
 }
 
@@ -59,33 +92,31 @@ export function TaxonomyInformation({ item }: DetailInformationProps) {
   ];
 
   return (
-    <Card>
-      <CardHeader className="grid grid-cols-[auto_1fr] items-center gap-3">
-        <span className="flex size-9 items-center justify-center rounded-lg bg-secondary text-primary">
+    <section className="flex flex-col gap-5">
+      <div className="flex items-center gap-3">
+        <span className="flex size-8 items-center justify-center text-primary">
           <Network />
         </span>
-        <CardTitle className="text-xl">Taksonomi</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <ol className="flex flex-col">
-          {rows.map(([label, value], index) => (
-            <li className="grid grid-cols-[24px_1fr] gap-3" key={label}>
-              <div className="flex flex-col items-center">
-                <span className="mt-1 size-2.5 rounded-full bg-primary" />
-                {index < rows.length - 1 ? (
-                  <span className="mt-1 min-h-8 w-px flex-1 bg-border" />
-                ) : null}
-              </div>
-              <div className="pb-4">
-                <p className="text-xs font-semibold text-muted-foreground">
-                  {label}
-                </p>
-                <p className="mt-0.5 text-sm font-medium">{value}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
-      </CardContent>
-    </Card>
+        <h2 className="text-xl font-semibold tracking-tight">Taksonomi</h2>
+      </div>
+      <ol className="flex flex-col">
+        {rows.map(([label, value], index) => (
+          <li className="grid grid-cols-[24px_1fr] gap-3" key={label}>
+            <div className="flex flex-col items-center">
+              <span className="mt-1.5 size-2.5 rounded-full bg-primary" />
+              {index < rows.length - 1 ? (
+                <span className="mt-1 min-h-8 w-px flex-1 bg-border" />
+              ) : null}
+            </div>
+            <div className="pb-4">
+              <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                {label}
+              </p>
+              <p className="mt-0.5 text-sm font-medium">{value}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
   );
 }

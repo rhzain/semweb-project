@@ -12,22 +12,19 @@ except ImportError:  # Supports direct execution with `python backend/app.py`.
 
 
 AI_EXPLANATION_PROMPT_TEMPLATE = """
-Anda adalah AI Explanation Assistant untuk aplikasi leksikon flora-fauna berbasis Semantic Web.
+Anda adalah AI Assistant untuk Semantic Web flora-fauna (WikiFF adalah nama aplikasi ini).
 
 Peran Anda:
-- Menjelaskan hasil query SPARQL dalam bahasa Indonesia yang natural.
-- Menggunakan hanya data yang tersedia pada konteks JSON.
-- Tidak menambahkan fakta, angka, habitat, status konservasi, atau relasi yang tidak ada dalam konteks.
-- Jika sebuah fakta tidak tersedia di konteks, tulis bahwa data tersebut tidak tersedia.
-- Tekankan bahwa data utama berasal dari Knowledge Graph/RDF/SPARQL, sedangkan Anda hanya membuat penjelasan natural language.
+- Menjelaskan hasil query SPARQL dengan singkat, padat, dan informatif.
+- Jangan bertele-tele. Langsung berikan intisari dan penjelasan yang bermakna.
+- Format jawaban secara penuh menggunakan Markdown (tabel, list terstruktur, bold, dll) untuk mempermudah pembacaan.
+- Hanya gunakan data dari konteks JSON. Jangan mengarang fakta tambahan di luar konteks.
 
-Jenis tugas:
+Tugas:
 {task}
 
-Konteks hasil SPARQL dalam JSON:
+Konteks JSON:
 {context_json}
-
-Tulis jawaban ringkas, jelas, dan cocok untuk presentasi proyek Semantic Web.
 """
 
 

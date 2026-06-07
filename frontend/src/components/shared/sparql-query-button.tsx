@@ -10,12 +10,14 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { cn } from "@/lib/utils";
 
 interface SparqlQueryButtonProps {
   query: string;
+  className?: string;
 }
 
-export function SparqlQueryButton({ query }: SparqlQueryButtonProps) {
+export function SparqlQueryButton({ query, className }: SparqlQueryButtonProps) {
   const [copied, setCopied] = useState(false);
 
   if (!query) return null;
@@ -41,7 +43,7 @@ export function SparqlQueryButton({ query }: SparqlQueryButtonProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="gap-1.5 rounded-sm text-xs" size="sm" variant="outline">
+        <Button className={cn("gap-1.5 rounded-sm text-xs", className)} size="sm" variant="outline">
           <Code2 className="size-3.5" />
           SPARQL Query
         </Button>

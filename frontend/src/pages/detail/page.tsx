@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { AlertCircle, ArrowLeft, FileQuestion } from "lucide-react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { AlertCircle, ArrowLeft, FileQuestion, Network, Sparkles } from "lucide-react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 import { DetailHero } from "@/components/detail/detail-hero";
 import {
@@ -10,8 +10,9 @@ import {
 import { RelatedSpecies } from "@/components/detail/related-species";
 import { AIExplanationPanel } from "@/components/shared/ai-explanation-panel";
 import { FullScreenLoader } from "@/components/shared/full-screen-loader";
-import { QueryPanel } from "@/components/shared/query-panel";
+import { SparqlQueryButton } from "@/components/shared/sparql-query-button";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Button } from "@/components/ui/button";
 import {
   Empty,
   EmptyDescription,
@@ -19,6 +20,8 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@/components/ui/empty";
+import { Separator } from "@/components/ui/separator";
+import { Spinner } from "@/components/ui/spinner";
 import { useApi } from "@/hooks/use-api";
 import { getJson } from "@/lib/api";
 import type { AIExplanation, SpeciesDetailResponse } from "@/types/api";
@@ -36,6 +39,7 @@ function DetailPage() {
   );
   const [aiExplanation, setAiExplanation] = useState<AIExplanation | null>(null);
   const [aiLoading, setAiLoading] = useState(false);
+  const aiPanelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setAiExplanation(null);
@@ -43,6 +47,11 @@ function DetailPage() {
 
   async function explainWithAi() {
     setAiLoading(true);
+    
+    // Auto-scroll to the AI panel
+    setTimeout(() => {
+      aiPanelRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
 
     try {
       const result = await getJson<AIExplanation>(
@@ -98,9 +107,6 @@ function DetailPage() {
 
   return (
     <div className="flex flex-col gap-7">
-      {aiLoading ? (
-        <FullScreenLoader label="Menyiapkan penjelasan AI..." />
-      ) : null}
       <button
         className="inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-primary"
         onClick={() => navigate(-1)}
@@ -112,23 +118,49 @@ function DetailPage() {
 
       <div className="grid items-start gap-7 lg:grid-cols-[minmax(0,1.55fr)_minmax(320px,0.85fr)]">
         <div className="flex min-w-0 flex-col gap-6">
-          <DetailHero
-            aiLoading={aiLoading}
-            item={data.item}
-            onExplain={explainWithAi}
-          />
-          <LexiconInformation item={data.item} />
-          <AIExplanationPanel
-            className="border-l-4 border-l-primary"
-            explanation={aiExplanation}
-          />
+          <div className="rounded-sm border bg-card text-card-foreground overflow-hidden">
+            <DetailHero item={data.item} />
+            <Separator />
+            <div className="px-6 py-6 sm:px-8 sm:py-8">
+              <LexiconInformation item={data.item} />
+            </div>
+          </div>
         </div>
 
         <aside className="flex min-w-0 flex-col gap-6">
           <TaxonomyInformation item={data.item} />
           <RelatedSpecies items={data.related} />
-          <QueryPanel compact query={query} />
+          
+          <div className="flex flex-col gap-3">
+            <SparqlQueryButton className="h-[52px] w-full justify-start rounded-sm text-sm font-medium [&_svg]:size-4" query={query} />
+            <Button asChild className="h-[52px] w-full justify-start rounded-sm text-sm font-medium [&_svg]:size-4" variant="outline">
+              <Link to={`/graph?species_id=${data.item.id}`}>
+                <Network data-icon="inline-start" />
+                Lihat graph
+              </Link>
+            </Button>
+            <Button
+              className="h-[52px] w-full justify-start rounded-sm text-sm font-medium [&_svg]:size-4"
+              disabled={aiLoading}
+              onClick={explainWithAi}
+              type="button"
+            >
+              {aiLoading ? (
+                <Spinner data-icon="inline-start" />
+              ) : (
+                <Sparkles data-icon="inline-start" />
+              )}
+              {aiLoading ? "Meminta AI..." : "Jelaskan dengan AI"}
+            </Button>
+          </div>
         </aside>
+      </div>
+
+      <div ref={aiPanelRef}>
+        <AIExplanationPanel
+          explanation={aiExplanation}
+          isLoading={aiLoading}
+        />
       </div>
     </div>
   );
