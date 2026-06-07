@@ -10,6 +10,7 @@ interface SpeciesImageProps {
   kingdom: string;
   className?: string;
   showSourceLink?: boolean;
+  blurredBackdrop?: boolean;
 }
 
 export function SpeciesImage({
@@ -19,6 +20,7 @@ export function SpeciesImage({
   kingdom,
   className,
   showSourceLink = false,
+  blurredBackdrop = false,
 }: SpeciesImageProps) {
   const [failed, setFailed] = useState(false);
   const TypeIcon = kingdom === "Plantae" ? Leaf : PawPrint;
@@ -29,13 +31,33 @@ export function SpeciesImage({
       className={cn("relative flex overflow-hidden bg-secondary", className)}
     >
       {showImage ? (
-        <img
-          alt={scientificName}
-          className="size-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-          loading="lazy"
-          onError={() => setFailed(true)}
-          src={imageUrl}
-        />
+        blurredBackdrop ? (
+          <>
+            {/* Blurred backdrop */}
+            <img
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 size-full scale-110 object-cover blur-xl brightness-75"
+              src={imageUrl}
+            />
+            {/* Main image */}
+            <img
+              alt={scientificName}
+              className="relative size-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+              loading="lazy"
+              onError={() => setFailed(true)}
+              src={imageUrl}
+            />
+          </>
+        ) : (
+          <img
+            alt={scientificName}
+            className="size-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+            loading="lazy"
+            onError={() => setFailed(true)}
+            src={imageUrl}
+          />
+        )
       ) : (
         <div className="flex size-full items-center justify-center text-primary/65">
           {failed ? <ImageOff /> : <TypeIcon />}

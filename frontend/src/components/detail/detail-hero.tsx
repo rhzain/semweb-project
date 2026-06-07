@@ -29,6 +29,7 @@ export function DetailHero({
   return (
     <Card className="overflow-hidden py-0">
       <SpeciesImage
+        blurredBackdrop
         className="aspect-[16/8] w-full min-h-56"
         imageSource={item.imageSource}
         imageUrl={item.imageUrl}
