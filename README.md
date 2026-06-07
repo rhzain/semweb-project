@@ -18,7 +18,7 @@ Proyek ini adalah aplikasi web leksikon nama ilmiah flora dan fauna Indonesia be
 ## Stack
 
 - Backend API: Flask
-- Frontend: React + Vite
+- Frontend: React + TypeScript + Vite + Tailwind CSS + shadcn/ui
 - Visualisasi graph: Cytoscape.js
 - RDF conversion: Python + RDFLib
 - Triple store dan SPARQL endpoint: Apache Jena Fuseki
@@ -43,6 +43,12 @@ python_script/rdf/main.py              Entry point konversi CSV ke RDF
 python_script/load/main.py             Entry point upload RDF ke Fuseki
 python_script/refresh/main.py          Entry point regenerate RDF dan upload
 frontend/                              React + Vite frontend
+frontend/src/pages/*/page.tsx          Page composer untuk setiap route
+frontend/src/components/<page>/        Section/component khusus per halaman
+frontend/src/components/shared/        Component lintas halaman
+frontend/src/components/ui/            Source component shadcn/ui
+frontend/src/hooks/                     Hook data fetching frontend
+frontend/src/types/                     Type payload API frontend
 Dockerfile                             Image Flask app dan RDF loader
 docker-compose.yml                     Flask app, Apache Jena Fuseki, dan RDF loader
 ```
@@ -227,7 +233,9 @@ Output scrape ditulis ke `data.csv/raw/` dan `data.csv/processed/species_enriche
 
 ## Catatan Frontend
 
-Frontend proyek ini memakai React + Vite agar UI lebih modern dan tetap clean. Flask tidak lagi merender halaman utama dengan template Jinja; Flask berperan sebagai API backend dan server hasil build React.
+Frontend proyek ini memakai React, TypeScript, Vite, Tailwind CSS, dan shadcn/ui. Setiap route disusun di `frontend/src/pages/*/page.tsx`, sedangkan section halaman berada di `frontend/src/components/<page>/`. Component yang dipakai lintas halaman berada di `frontend/src/components/shared/`, dan primitive shadcn berada di `frontend/src/components/ui/`.
+
+Flask tidak lagi merender halaman utama dengan template Jinja; Flask berperan sebagai API backend dan server hasil build React.
 
 ## Troubleshooting
 
