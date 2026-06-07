@@ -43,7 +43,7 @@ export function SpeciesImage({
             {/* Main image */}
             <img
               alt={scientificName}
-              className="relative size-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+              className="relative size-full object-contain"
               loading="lazy"
               onError={() => setFailed(true)}
               src={imageUrl}
@@ -52,7 +52,7 @@ export function SpeciesImage({
         ) : (
           <img
             alt={scientificName}
-            className="size-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+            className="size-full object-cover object-top"
             loading="lazy"
             onError={() => setFailed(true)}
             src={imageUrl}

@@ -20,7 +20,7 @@ interface SpeciesCardProps {
 export function SpeciesCard({ item }: SpeciesCardProps) {
   return (
     <Link className="group block h-full" to={`/species/${item.id}`}>
-      <Card className="h-full gap-0 py-0 transition-[transform,box-shadow,border-color] duration-200 group-hover:-translate-y-1 group-hover:border-primary/25 group-hover:shadow-[0_18px_50px_rgba(23,60,42,0.09)]">
+      <Card className="h-full gap-0 py-0 transition-[box-shadow,border-color] duration-200 group-hover:border-primary/25 group-hover:shadow-[0_18px_50px_rgba(23,60,42,0.09)]">
         <SpeciesImage
           className="aspect-[4/3] w-full"
           imageSource={item.imageSource}
@@ -55,11 +55,11 @@ export function SpeciesCard({ item }: SpeciesCardProps) {
             </p>
           )}
         </CardContent>
-        <CardFooter className="mt-auto justify-between py-3 text-sm font-medium text-primary">
-          <span>{item.kingdomLabel}</span>
-          <span className="inline-flex items-center gap-1.5">
+        <CardFooter className="mt-auto justify-between border-none bg-transparent py-4 text-sm font-medium text-primary">
+          <span className="text-xs font-medium text-muted-foreground">{item.kingdomLabel}</span>
+          <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary/80">
             Lihat detail
-            <ArrowRight className="transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
           </span>
         </CardFooter>
       </Card>
