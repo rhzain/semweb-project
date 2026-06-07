@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
-import { AlertCircle, FileQuestion } from "lucide-react";
-import { useParams } from "react-router-dom";
+import { AlertCircle, ChevronRight, FileQuestion } from "lucide-react";
+import { Link, useParams } from "react-router-dom";
 
 import { DetailHero } from "@/components/detail/detail-hero";
-import { DetailInformation } from "@/components/detail/detail-information";
+import {
+  LexiconInformation,
+  TaxonomyInformation,
+} from "@/components/detail/detail-information";
+import { RelatedSpecies } from "@/components/detail/related-species";
 import { AIExplanationPanel } from "@/components/shared/ai-explanation-panel";
 import { QueryPanel } from "@/components/shared/query-panel";
-import { SectionHeading } from "@/components/shared/section-heading";
-import { SpeciesGrid } from "@/components/shared/species-grid";
 import { StatusLine } from "@/components/shared/status-line";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import {
@@ -94,22 +96,40 @@ function DetailPage() {
   const query = `${data.sparql.detail}\n\n${data.sparql.related}`.trim();
 
   return (
-    <div className="flex flex-col gap-6">
-      <DetailHero
-        aiLoading={aiLoading}
-        item={data.item}
-        onExplain={explainWithAi}
-      />
-      <AIExplanationPanel explanation={aiExplanation} />
-      <DetailInformation item={data.item} />
-      <section className="flex flex-col gap-4">
-        <SectionHeading
-          description="Relasi dihitung dari kesamaan family atau genus dalam knowledge graph."
-          title="Spesies Terkait"
-        />
-        <SpeciesGrid items={data.related} />
-      </section>
-      <QueryPanel query={query} />
+    <div className="flex flex-col gap-7">
+      <nav
+        aria-label="Breadcrumb"
+        className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground"
+      >
+        <Link className="hover:text-primary" to="/data">
+          Katalog
+        </Link>
+        <ChevronRight />
+        <span>{data.item.categoryLabel}</span>
+        <ChevronRight />
+        <span className="font-medium text-primary">{data.item.indonesianName}</span>
+      </nav>
+
+      <div className="grid items-start gap-7 lg:grid-cols-[minmax(0,1.55fr)_minmax(320px,0.85fr)]">
+        <div className="flex min-w-0 flex-col gap-6">
+          <DetailHero
+            aiLoading={aiLoading}
+            item={data.item}
+            onExplain={explainWithAi}
+          />
+          <LexiconInformation item={data.item} />
+          <AIExplanationPanel
+            className="border-l-4 border-l-primary"
+            explanation={aiExplanation}
+          />
+        </div>
+
+        <aside className="flex min-w-0 flex-col gap-6">
+          <TaxonomyInformation item={data.item} />
+          <RelatedSpecies items={data.related} />
+          <QueryPanel compact query={query} />
+        </aside>
+      </div>
     </div>
   );
 }

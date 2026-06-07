@@ -1,13 +1,9 @@
 import type { FormEvent } from "react";
-import { ArrowRight, Search } from "lucide-react";
+import { Search } from "lucide-react";
+import { Link } from "react-router-dom";
 
-import {
-  FilterSelect,
-  type FilterOption,
-} from "@/components/shared/filter-select";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
+import { Field, FieldGroup } from "@/components/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
@@ -16,73 +12,56 @@ import {
 
 export interface HomeSearchValues {
   q: string;
-  kingdom: string;
-  category: string;
 }
 
 interface HomeSearchFormProps {
   values: HomeSearchValues;
-  categoryOptions: FilterOption[];
+  categories: string[];
   onChange: (values: HomeSearchValues) => void;
   onSubmit: (event: FormEvent<HTMLFormElement>) => void;
 }
 
-const kingdomOptions: FilterOption[] = [
-  { label: "Plantae", value: "Plantae" },
-  { label: "Animalia", value: "Animalia" },
-];
-
 export function HomeSearchForm({
   values,
-  categoryOptions,
+  categories,
   onChange,
   onSubmit,
 }: HomeSearchFormProps) {
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Cari di knowledge graph</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <form onSubmit={onSubmit}>
-          <FieldGroup className="grid gap-4 md:grid-cols-2 xl:grid-cols-[minmax(0,2fr)_minmax(180px,1fr)_minmax(180px,1fr)_auto] xl:items-end">
-            <Field>
-              <FieldLabel htmlFor="home-query">Kata kunci</FieldLabel>
-              <InputGroup>
-                <InputGroupInput
-                  id="home-query"
-                  onChange={(event) =>
-                    onChange({ ...values, q: event.target.value })
-                  }
-                  placeholder="Contoh: kucing, Panthera, Felidae"
-                  value={values.q}
-                />
-                <InputGroupAddon>
-                  <Search />
-                </InputGroupAddon>
-              </InputGroup>
-            </Field>
-            <FilterSelect
-              id="home-kingdom"
-              label="Kingdom"
-              onValueChange={(kingdom) => onChange({ ...values, kingdom })}
-              options={kingdomOptions}
-              value={values.kingdom}
-            />
-            <FilterSelect
-              id="home-category"
-              label="Kategori"
-              onValueChange={(category) => onChange({ ...values, category })}
-              options={categoryOptions}
-              value={values.category}
-            />
-            <Button type="submit">
-              Cari
-              <ArrowRight data-icon="inline-end" />
+    <div className="mx-auto flex w-full max-w-4xl flex-col gap-5">
+      <form onSubmit={onSubmit}>
+        <FieldGroup>
+          <Field>
+            <InputGroup className="h-12 rounded-sm bg-background shadow-[0_12px_36px_rgba(20,52,37,0.07)]">
+              <InputGroupAddon className="pl-4">
+                <Search />
+              </InputGroupAddon>
+              <InputGroupInput
+                className="pr-4 text-sm sm:text-base"
+                id="home-query"
+                onChange={(event) => onChange({ q: event.target.value })}
+                placeholder="Cari nama spesies, nama ilmiah, family, atau genus"
+                value={values.q}
+              />
+            </InputGroup>
+          </Field>
+        </FieldGroup>
+      </form>
+
+      {categories.length ? (
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          <span className="mr-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+            Kategori cepat
+          </span>
+          {categories.slice(0, 4).map((category) => (
+            <Button asChild key={category} size="sm" variant="outline">
+              <Link to={`/data?category=${encodeURIComponent(category)}`}>
+                {category}
+              </Link>
             </Button>
-          </FieldGroup>
-        </form>
-      </CardContent>
-    </Card>
+          ))}
+        </div>
+      ) : null}
+    </div>
   );
 }

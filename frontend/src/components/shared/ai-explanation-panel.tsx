@@ -1,14 +1,17 @@
 import { AlertCircle, Sparkles } from "lucide-react";
 
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { cn } from "@/lib/utils";
 import type { AIExplanation } from "@/types/api";
 
 interface AIExplanationPanelProps {
   explanation: AIExplanation | null;
+  className?: string;
 }
 
 export function AIExplanationPanel({
   explanation,
+  className,
 }: AIExplanationPanelProps) {
   if (!explanation) {
     return null;
@@ -27,7 +30,7 @@ export function AIExplanationPanel({
   }
 
   return (
-    <Alert className="border-primary/20 bg-primary/5">
+    <Alert className={cn("border-primary/20 bg-primary/5", className)}>
       <Sparkles />
       <AlertTitle>AI Explanation Assistant</AlertTitle>
       <AlertDescription className="flex flex-col gap-3">

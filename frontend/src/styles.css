@@ -49,30 +49,30 @@
 }
 
 :root {
-    --background: oklch(0.982 0.012 145);
-    --foreground: oklch(0.21 0.035 155);
-    --card: oklch(0.995 0.006 145);
-    --card-foreground: oklch(0.21 0.035 155);
-    --popover: oklch(0.995 0.006 145);
-    --popover-foreground: oklch(0.21 0.035 155);
-    --primary: oklch(0.42 0.105 160);
-    --primary-foreground: oklch(0.985 0.008 150);
-    --secondary: oklch(0.94 0.025 150);
-    --secondary-foreground: oklch(0.27 0.055 155);
-    --muted: oklch(0.95 0.018 145);
-    --muted-foreground: oklch(0.5 0.035 155);
-    --accent: oklch(0.93 0.055 78);
-    --accent-foreground: oklch(0.3 0.06 65);
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.17 0.018 150);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.17 0.018 150);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.17 0.018 150);
+    --primary: oklch(0.32 0.09 157);
+    --primary-foreground: oklch(0.99 0.004 150);
+    --secondary: oklch(0.96 0.018 152);
+    --secondary-foreground: oklch(0.29 0.07 157);
+    --muted: oklch(0.97 0.006 150);
+    --muted-foreground: oklch(0.48 0.018 150);
+    --accent: oklch(0.95 0.025 153);
+    --accent-foreground: oklch(0.29 0.07 157);
     --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.88 0.022 145);
-    --input: oklch(0.88 0.022 145);
-    --ring: oklch(0.55 0.08 160);
+    --border: oklch(0.9 0.008 150);
+    --input: oklch(0.9 0.008 150);
+    --ring: oklch(0.43 0.08 157);
     --chart-1: oklch(0.52 0.12 160);
     --chart-2: oklch(0.68 0.12 82);
     --chart-3: oklch(0.57 0.1 295);
     --chart-4: oklch(0.63 0.1 215);
     --chart-5: oklch(0.5 0.08 45);
-    --radius: 0.625rem;
+    --radius: 0.75rem;
     --sidebar: oklch(0.985 0 0);
     --sidebar-foreground: oklch(0.145 0 0);
     --sidebar-primary: oklch(0.205 0 0);
@@ -123,10 +123,6 @@
     }
   body {
     @apply min-h-screen bg-background text-foreground antialiased;
-    background-image:
-      radial-gradient(circle at top left, color-mix(in oklch, var(--primary) 8%, transparent), transparent 30rem),
-      radial-gradient(circle at bottom right, color-mix(in oklch, var(--accent) 18%, transparent), transparent 34rem);
-    background-attachment: fixed;
     }
   button:not(:disabled), [role="button"]:not(:disabled) {
     cursor: pointer;

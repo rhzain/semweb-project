@@ -8,13 +8,15 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@/components/ui/empty";
+import { cn } from "@/lib/utils";
 import type { SpeciesListItem } from "@/types/api";
 
 interface SpeciesGridProps {
   items: SpeciesListItem[];
+  className?: string;
 }
 
-export function SpeciesGrid({ items }: SpeciesGridProps) {
+export function SpeciesGrid({ items, className }: SpeciesGridProps) {
   if (!items.length) {
     return (
       <Empty className="border bg-card">
@@ -32,7 +34,7 @@ export function SpeciesGrid({ items }: SpeciesGridProps) {
   }
 
   return (
-    <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+    <section className={cn("grid gap-5 md:grid-cols-2 xl:grid-cols-3", className)}>
       {items.map((item) => (
         <SpeciesCard item={item} key={item.id} />
       ))}

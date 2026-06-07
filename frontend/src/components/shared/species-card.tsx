@@ -1,8 +1,8 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import { SpeciesImage } from "@/components/shared/species-image";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -18,46 +18,51 @@ interface SpeciesCardProps {
 }
 
 export function SpeciesCard({ item }: SpeciesCardProps) {
-  const metadata = [
-    ["Phylum", item.phylumLabel],
-    ["Family", item.familyLabel],
-    ["Genus", item.genusLabel],
-    ["Inggris", item.englishName],
-  ].filter((entry): entry is [string, string] => Boolean(entry[1]));
-
   return (
-    <Card className="h-full">
-      <CardHeader>
-        <div className="mb-2 flex flex-wrap gap-2">
-          <Badge variant="secondary">{item.kingdomLabel}</Badge>
-          <Badge variant="outline">{item.categoryLabel}</Badge>
-          {item.relation ? <Badge>{item.relation}</Badge> : null}
-        </div>
-        <CardTitle className="text-lg">{item.indonesianName}</CardTitle>
-        <CardDescription className="font-medium italic text-foreground/80">
-          {item.scientificName}
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <dl className="grid grid-cols-2 gap-4">
-          {metadata.map(([label, value]) => (
-            <div className="min-w-0" key={label}>
-              <dt className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                {label}
-              </dt>
-              <dd className="mt-1 truncate text-sm">{value}</dd>
-            </div>
-          ))}
-        </dl>
-      </CardContent>
-      <CardFooter>
-        <Button asChild variant="outline">
-          <Link to={`/species/${item.id}`}>
-            Detail
-            <ArrowRight data-icon="inline-end" />
-          </Link>
-        </Button>
-      </CardFooter>
-    </Card>
+    <Link className="group block h-full" to={`/species/${item.id}`}>
+      <Card className="h-full gap-0 py-0 transition-[transform,box-shadow,border-color] duration-200 group-hover:-translate-y-1 group-hover:border-primary/25 group-hover:shadow-[0_18px_50px_rgba(23,60,42,0.09)]">
+        <SpeciesImage
+          className="aspect-[4/3] w-full"
+          imageSource={item.imageSource}
+          imageUrl={item.imageUrl}
+          kingdom={item.kingdomLabel}
+          scientificName={item.scientificName}
+        />
+        <CardHeader className="gap-3 pt-5">
+          <div className="flex flex-wrap gap-2">
+              <Badge variant="secondary">{item.categoryLabel}</Badge>
+              {item.relation ? (
+                <Badge variant="outline">{item.relation}</Badge>
+              ) : null}
+          </div>
+          <div className="flex flex-col gap-1">
+            <CardTitle className="text-lg font-semibold tracking-[-0.02em]">
+              {item.indonesianName}
+            </CardTitle>
+            <CardDescription className="font-medium italic">
+              {item.scientificName}
+            </CardDescription>
+          </div>
+        </CardHeader>
+        <CardContent className="pb-5">
+          {item.description ? (
+            <p className="line-clamp-3 text-sm leading-6 text-muted-foreground">
+              {item.description}
+            </p>
+          ) : (
+            <p className="text-sm leading-6 text-muted-foreground">
+              Family {item.familyLabel}, genus {item.genusLabel}.
+            </p>
+          )}
+        </CardContent>
+        <CardFooter className="mt-auto justify-between py-3 text-sm font-medium text-primary">
+          <span>{item.kingdomLabel}</span>
+          <span className="inline-flex items-center gap-1.5">
+            Lihat detail
+            <ArrowRight className="transition-transform group-hover:translate-x-1" />
+          </span>
+        </CardFooter>
+      </Card>
+    </Link>
   );
 }
