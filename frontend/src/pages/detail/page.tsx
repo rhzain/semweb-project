@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { AlertCircle, ChevronRight, FileQuestion } from "lucide-react";
-import { Link, useParams } from "react-router-dom";
+import { AlertCircle, ArrowLeft, FileQuestion } from "lucide-react";
+import { useNavigate, useParams } from "react-router-dom";
 
 import { DetailHero } from "@/components/detail/detail-hero";
 import {
@@ -24,6 +24,7 @@ import { getJson } from "@/lib/api";
 import type { AIExplanation, SpeciesDetailResponse } from "@/types/api";
 
 function DetailPage() {
+  const navigate = useNavigate();
   const { speciesId = "" } = useParams();
   const { data, loading, error } = useApi<SpeciesDetailResponse>(
     `/api/species/${speciesId}`,
@@ -100,18 +101,14 @@ function DetailPage() {
       {aiLoading ? (
         <FullScreenLoader label="Menyiapkan penjelasan AI..." />
       ) : null}
-      <nav
-        aria-label="Breadcrumb"
-        className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground"
+      <button
+        className="inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-primary"
+        onClick={() => navigate(-1)}
+        type="button"
       >
-        <Link className="hover:text-primary" to="/data">
-          Katalog
-        </Link>
-        <ChevronRight />
-        <span>{data.item.categoryLabel}</span>
-        <ChevronRight />
-        <span className="font-medium text-primary">{data.item.indonesianName}</span>
-      </nav>
+        <ArrowLeft className="size-4" />
+        Kembali
+      </button>
 
       <div className="grid items-start gap-7 lg:grid-cols-[minmax(0,1.55fr)_minmax(320px,0.85fr)]">
         <div className="flex min-w-0 flex-col gap-6">
