@@ -5,7 +5,7 @@ from pathlib import Path
 
 from rdflib import Graph, Literal, Namespace, RDF, RDFS
 
-from common.paths import DATASET_CSV, RDF_TURTLE
+from common.paths import DATASET_CSV, RDF_TURTLE, SPECIES_UI_CONTENT_CSV
 from common.text import slugify
 
 DEFAULT_CSV = DATASET_CSV
@@ -41,9 +41,23 @@ def row_search_text(row: dict[str, str]) -> str:
     return " ".join(row.get(field, "") for field in fields if row.get(field, "")).lower()
 
 
+def load_ui_content(csv_path: Path = SPECIES_UI_CONTENT_CSV) -> dict[str, dict[str, str]]:
+    """Load optional UI enrichment rows keyed by the stable species ID."""
+    if not csv_path.exists():
+        return {}
+
+    with csv_path.open("r", encoding="utf-8", newline="") as csv_file:
+        return {
+            row["id"].strip(): row
+            for row in csv.DictReader(csv_file)
+            if row.get("id", "").strip()
+        }
+
+
 def convert_csv_to_rdf(csv_path: Path, output_path: Path) -> None:
     """Convert the validated CSV dataset into RDF Turtle triples."""
     graph = Graph()
+    ui_content = load_ui_content()
     graph.bind("ff", FF)
     graph.bind("data", DATA)
     graph.bind("rdf", RDF)
@@ -54,6 +68,7 @@ def convert_csv_to_rdf(csv_path: Path, output_path: Path) -> None:
         for row in reader:
             species = DATA[slugify(row["id"])]
             kingdom_value = row["kingdom"].strip()
+            ui_row = ui_content.get(row["id"].strip(), {})
 
             graph.add((species, RDF.type, FF.SpeciesEntry))
             if kingdom_value.lower() == "plantae":
@@ -69,6 +84,17 @@ def convert_csv_to_rdf(csv_path: Path, output_path: Path) -> None:
             graph.add((species, FF.englishName, Literal(row["nama_inggris"], lang="en")))
             graph.add((species, FF.sourceData, Literal(row["sumber_data"])))
             graph.add((species, FF.searchText, Literal(row_search_text(row))))
+
+            optional_ui_fields = [
+                ("description", FF.description),
+                ("image_url", FF.imageUrl),
+                ("image_source", FF.imageSource),
+                ("description_source", FF.descriptionSource),
+            ]
+            for csv_column, rdf_property in optional_ui_fields:
+                value = ui_row.get(csv_column, "").strip()
+                if value:
+                    graph.add((species, rdf_property, Literal(value)))
 
             synonyms = [
                 item.strip()
