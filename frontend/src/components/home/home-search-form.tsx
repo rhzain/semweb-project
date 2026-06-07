@@ -1,4 +1,4 @@
-import type { FormEvent } from "react";
+import { type FormEvent, useMemo } from "react";
 import { Search } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -27,6 +27,11 @@ export function HomeSearchForm({
   onChange,
   onSubmit,
 }: HomeSearchFormProps) {
+  const randomCategories = useMemo(() => {
+    const shuffled = [...categories].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, 4);
+  }, [categories]);
+
   return (
     <div className="mx-auto flex w-full max-w-4xl flex-col gap-5">
       <form onSubmit={onSubmit}>
@@ -53,8 +58,8 @@ export function HomeSearchForm({
           <span className="mr-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
             Kategori cepat
           </span>
-          {categories.slice(0, 4).map((category) => (
-            <Button asChild key={category} size="sm" variant="outline">
+          {randomCategories.map((category) => (
+            <Button asChild key={category} size="sm" variant="outline" className="rounded-full">
               <Link to={`/data?category=${encodeURIComponent(category)}`}>
                 {category}
               </Link>
