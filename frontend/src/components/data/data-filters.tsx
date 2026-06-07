@@ -44,7 +44,7 @@ export function DataFilters({
   onChange,
 }: DataFiltersProps) {
   return (
-    <Card className="lg:sticky lg:top-28">
+    <Card className="rounded-sm lg:sticky lg:top-28">
       <CardHeader>
         <CardTitle>Filter Katalog</CardTitle>
       </CardHeader>
@@ -54,8 +54,9 @@ export function DataFilters({
           <FieldGroup>
             <Field>
               <FieldLabel htmlFor="catalog-query">Cari data</FieldLabel>
-              <InputGroup>
+              <InputGroup className="rounded-sm">
                 <InputGroupInput
+                  className="rounded-sm"
                   id="catalog-query"
                   onChange={(event) => onChange("q", event.target.value)}
                   placeholder="Nama, family, atau genus"
@@ -67,6 +68,7 @@ export function DataFilters({
               </InputGroup>
             </Field>
             <FilterSelect
+              className="rounded-sm"
               id="catalog-kingdom"
               label="Kingdom"
               onValueChange={(value) => onChange("kingdom", value)}
@@ -74,6 +76,7 @@ export function DataFilters({
               value={kingdom}
             />
             <FilterSelect
+              className="rounded-sm"
               id="catalog-category"
               label="Kategori"
               onValueChange={(value) => onChange("category", value)}

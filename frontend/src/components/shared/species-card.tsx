@@ -20,7 +20,7 @@ interface SpeciesCardProps {
 export function SpeciesCard({ item }: SpeciesCardProps) {
   return (
     <Link className="group block h-full" to={`/species/${item.id}`}>
-      <Card className="h-full gap-0 py-0 transition-[box-shadow,border-color] duration-200 group-hover:border-primary/25 group-hover:shadow-[0_18px_50px_rgba(23,60,42,0.09)]">
+      <Card className="h-full gap-0 rounded-sm py-0 transition-[box-shadow,border-color] duration-200 group-hover:border-primary/25 group-hover:shadow-[0_18px_50px_rgba(23,60,42,0.09)]">
         <SpeciesImage
           className="aspect-[4/3] w-full"
           imageSource={item.imageSource}

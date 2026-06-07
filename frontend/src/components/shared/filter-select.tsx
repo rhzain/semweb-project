@@ -43,7 +43,7 @@ export function FilterSelect({
         }
         value={value || EMPTY_VALUE}
       >
-        <SelectTrigger className="w-full" id={id}>
+        <SelectTrigger className="w-full rounded-sm" id={id}>
           <SelectValue />
         </SelectTrigger>
         <SelectContent position="popper">
