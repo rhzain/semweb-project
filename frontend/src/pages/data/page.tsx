@@ -69,15 +69,13 @@ function DataPage() {
 
         <div className="flex min-w-0 flex-col gap-6">
           <div className="flex min-h-10 items-center justify-between text-sm text-muted-foreground">
-            {loading ? (
-              <span>Memperbarui hasil...</span>
-            ) : (
+            {!loading ? (
               <span>
                 Menampilkan{" "}
                 <strong className="text-foreground">{data.items.length}</strong>{" "}
                 spesies
               </span>
-            )}
+            ) : null}
             {!loading && data.sparql ? (
               <SparqlQueryButton query={data.sparql} />
             ) : null}

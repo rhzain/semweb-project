@@ -69,9 +69,7 @@ function GraphPage() {
 
       <div className="flex flex-col gap-3">
         <div className="flex min-h-8 flex-wrap items-center justify-between gap-3 text-sm text-muted-foreground">
-          {loading ? (
-            <span>Memperbarui graph...</span>
-          ) : (
+          {!loading ? (
             <span>
               Menampilkan{" "}
               <strong className="text-foreground">
@@ -83,7 +81,7 @@ function GraphPage() {
               </strong>{" "}
               relasi
             </span>
-          )}
+          ) : null}
           {!loading && data.sparql ? (
             <SparqlQueryButton query={data.sparql} />
           ) : null}

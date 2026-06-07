@@ -183,12 +183,6 @@ function ComparePage() {
         speciesB={speciesB}
       />
 
-      {loading ? (
-        <p className="text-sm text-muted-foreground">
-          Memperbarui perbandingan...
-        </p>
-      ) : null}
-
       {error ? (
         <Alert variant="destructive">
           <AlertCircle />
