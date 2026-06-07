@@ -163,6 +163,26 @@ ff:sourceData a owl:DatatypeProperty ;
     rdfs:range xsd:string ;
     rdfs:label "source data" .
 
+ff:description a owl:DatatypeProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range xsd:string ;
+    rdfs:label "species description" .
+
+ff:descriptionSource a owl:DatatypeProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range xsd:string ;
+    rdfs:label "description source" .
+
+ff:imageUrl a owl:DatatypeProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range xsd:anyURI ;
+    rdfs:label "image URL" .
+
+ff:imageSource a owl:DatatypeProperty ;
+    rdfs:domain ff:SpeciesEntry ;
+    rdfs:range xsd:anyURI ;
+    rdfs:label "image source" .
+
 ff:searchText a owl:DatatypeProperty ;
     rdfs:domain ff:SpeciesEntry ;
     rdfs:range xsd:string ;

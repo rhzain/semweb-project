@@ -5,6 +5,8 @@
 data:ajag a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Ajak (Cuon alpinus)" ;
+    ff:description "Ajak (Cuon alpinus) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Canidae dan genus Cuon. Nama Inggris yang tercatat adalah dhole." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "dhole"@en ;
     ff:entryId "ajag" ;
     ff:hasCategory data:category_mammalia ;
@@ -14,6 +16,8 @@ data:ajag a ff:FaunaEntry,
     ff:hasOrder data:order_carnivora ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Dhole_%28Asiatic_wild_dog%29_cropped.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dhole_%28Asiatic_wild_dog%29_cropped.jpg?width=1200" ;
     ff:indonesianName "Ajak"@id ;
     ff:scientificName "Cuon alpinus" ;
     ff:scientificSynonym "Canis alpinus" ;
@@ -23,6 +27,8 @@ data:ajag a ff:FaunaEntry,
 data:anggrek_bulan a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Anggrek bulan (Phalaenopsis amabilis)" ;
+    ff:description "Anggrek bulan (Phalaenopsis amabilis) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Liliopsida. Spesies ini tercatat pada family Orchidaceae dan genus Phalaenopsis. Nama Inggris yang tercatat adalah Moon Orchid." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Moon Orchid"@en ;
     ff:entryId "anggrek_bulan" ;
     ff:hasCategory data:category_liliopsida ;
@@ -32,6 +38,8 @@ data:anggrek_bulan a ff:FloraEntry,
     ff:hasOrder data:order_asparagales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_liliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Phalaenopsis_amabilis_Orchi_03.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Phalaenopsis_amabilis_Orchi_03.jpg?width=1200" ;
     ff:indonesianName "Anggrek bulan"@id ;
     ff:scientificName "Phalaenopsis amabilis" ;
     ff:scientificSynonym "Cymbidium amabile",
@@ -44,6 +52,8 @@ data:anggrek_bulan a ff:FloraEntry,
 data:anoa_dataran_rendah a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Anoa Dataran Rendah (Bubalus depressicornis)" ;
+    ff:description "Anoa Dataran Rendah (Bubalus depressicornis) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Bovidae dan genus Bubalus. Nama Inggris yang tercatat adalah Lowland Anoa." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Lowland Anoa"@en ;
     ff:entryId "anoa_dataran_rendah" ;
     ff:hasCategory data:category_mammalia ;
@@ -53,6 +63,8 @@ data:anoa_dataran_rendah a ff:FaunaEntry,
     ff:hasOrder data:order_artiodactyla ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Lowland_anoa.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lowland_anoa.jpg?width=1200" ;
     ff:indonesianName "Anoa Dataran Rendah"@id ;
     ff:scientificName "Bubalus depressicornis" ;
     ff:scientificSynonym "Anoa depressicornis",
@@ -64,6 +76,8 @@ data:anoa_dataran_rendah a ff:FaunaEntry,
 data:anoa_pegunungan a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "anoa pegunungan (Bubalus quarlesi)" ;
+    ff:description "anoa pegunungan (Bubalus quarlesi) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Bovidae dan genus Bubalus. Nama Inggris yang tercatat adalah mountain anoa." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "mountain anoa"@en ;
     ff:entryId "anoa_pegunungan" ;
     ff:hasCategory data:category_mammalia ;
@@ -73,6 +87,8 @@ data:anoa_pegunungan a ff:FaunaEntry,
     ff:hasOrder data:order_artiodactyla ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Buablus_quarlesi2.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Buablus_quarlesi2.jpg?width=1200" ;
     ff:indonesianName "anoa pegunungan"@id ;
     ff:scientificName "Bubalus quarlesi" ;
     ff:scientificSynonym "Anoa quarlesi" ;
@@ -82,6 +98,8 @@ data:anoa_pegunungan a ff:FaunaEntry,
 data:arwana_asia a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Arwana Asia (Scleropages formosus)" ;
+    ff:description "Arwana Asia (Scleropages formosus) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Teleostei. Spesies ini tercatat pada family Osteoglossidae dan genus Scleropages. Nama Inggris yang tercatat adalah Asian arowana." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Asian arowana"@en ;
     ff:entryId "arwana_asia" ;
     ff:hasCategory data:category_teleostei ;
@@ -91,6 +109,8 @@ data:arwana_asia a ff:FaunaEntry,
     ff:hasOrder data:order_osteoglossiformes ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_teleostei ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Arowana.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Arowana.jpg?width=1200" ;
     ff:indonesianName "Arwana Asia"@id ;
     ff:scientificName "Scleropages formosus" ;
     ff:scientificSynonym "Osteoglossum formosum",
@@ -103,6 +123,8 @@ data:arwana_asia a ff:FaunaEntry,
 data:babi_sulawesi a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Babi varu (Sus celebensis)" ;
+    ff:description "Babi varu (Sus celebensis) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Suidae dan genus Sus. Nama Inggris yang tercatat adalah Celebes warty pig." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Celebes warty pig"@en ;
     ff:entryId "babi_sulawesi" ;
     ff:hasCategory data:category_mammalia ;
@@ -112,6 +134,8 @@ data:babi_sulawesi a ff:FaunaEntry,
     ff:hasOrder data:order_artiodactyla ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Sus_celebensis_416841925.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sus_celebensis_416841925.jpg?width=1200" ;
     ff:indonesianName "Babi varu"@id ;
     ff:scientificName "Sus celebensis" ;
     ff:searchText "sus celebensis babi varu celebes warty pig animalia chordata mammalia artiodactyla suidae sus mammalia -" ;
@@ -120,6 +144,8 @@ data:babi_sulawesi a ff:FaunaEntry,
 data:babirusa_sulawesi a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Babirusa sulawesi-utara (Babyrousa celebensis)" ;
+    ff:description "Babirusa sulawesi-utara (Babyrousa celebensis) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Suidae dan genus Babyrousa. Nama Inggris yang tercatat adalah North Sulawesi babirusa." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "North Sulawesi babirusa"@en ;
     ff:entryId "babirusa_sulawesi" ;
     ff:hasCategory data:category_mammalia ;
@@ -129,6 +155,8 @@ data:babirusa_sulawesi a ff:FaunaEntry,
     ff:hasOrder data:order_artiodactyla ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Hirscheber1a.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hirscheber1a.jpg?width=1200" ;
     ff:indonesianName "Babirusa sulawesi-utara"@id ;
     ff:scientificName "Babyrousa celebensis" ;
     ff:scientificSynonym "Babirussa celebensis",
@@ -141,6 +169,8 @@ data:babirusa_sulawesi a ff:FaunaEntry,
 data:badak_jawa a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Badak Sunda (Rhinoceros sondaicus)" ;
+    ff:description "Badak Sunda (Rhinoceros sondaicus) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Rhinocerotidae dan genus Rhinoceros. Nama Inggris yang tercatat adalah Javan rhinoceros." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Javan rhinoceros"@en ;
     ff:entryId "badak_jawa" ;
     ff:hasCategory data:category_mammalia ;
@@ -150,6 +180,8 @@ data:badak_jawa a ff:FaunaEntry,
     ff:hasOrder data:order_perissodactyla ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Rhinoceros_sondaicus_in_London_Zoo.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Rhinoceros_sondaicus_in_London_Zoo.jpg?width=1200" ;
     ff:indonesianName "Badak Sunda"@id ;
     ff:scientificName "Rhinoceros sondaicus" ;
     ff:searchText "rhinoceros sondaicus badak sunda javan rhinoceros animalia chordata mammalia perissodactyla rhinocerotidae rhinoceros mammalia -" ;
@@ -158,6 +190,8 @@ data:badak_jawa a ff:FaunaEntry,
 data:badak_sumatra a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "badak sumatra (Dicerorhinus sumatrensis)" ;
+    ff:description "badak sumatra (Dicerorhinus sumatrensis) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Rhinocerotidae dan genus Dicerorhinus. Nama Inggris yang tercatat adalah Sumatran rhinoceros." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Sumatran rhinoceros"@en ;
     ff:entryId "badak_sumatra" ;
     ff:hasCategory data:category_mammalia ;
@@ -167,6 +201,8 @@ data:badak_sumatra a ff:FaunaEntry,
     ff:hasOrder data:order_perissodactyla ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Sumatran_Rhino_2.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sumatran_Rhino_2.jpg?width=1200" ;
     ff:indonesianName "badak sumatra"@id ;
     ff:scientificName "Dicerorhinus sumatrensis" ;
     ff:scientificSynonym "Didermocerus sumatrensis",
@@ -178,6 +214,8 @@ data:badak_sumatra a ff:FaunaEntry,
 data:bakau_minyak a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Bakau minyak (Rhizophora apiculata)" ;
+    ff:description "Bakau minyak (Rhizophora apiculata) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Rhizophoraceae dan genus Rhizophora. Nama Inggris yang tercatat adalah mangrove." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "mangrove"@en ;
     ff:entryId "bakau_minyak" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -187,6 +225,8 @@ data:bakau_minyak a ff:FloraEntry,
     ff:hasOrder data:order_malpighiales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Thakafathi.JPG" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Thakafathi.JPG?width=1200" ;
     ff:indonesianName "Bakau minyak"@id ;
     ff:scientificName "Rhizophora apiculata" ;
     ff:scientificSynonym "Rhizophora candelaria",
@@ -197,6 +237,8 @@ data:bakau_minyak a ff:FloraEntry,
 data:banteng a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Banteng (Bos javanicus)" ;
+    ff:description "Banteng (Bos javanicus) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Bovidae dan genus Bos. Nama Inggris yang tercatat adalah Banteng." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Banteng"@en ;
     ff:entryId "banteng" ;
     ff:hasCategory data:category_mammalia ;
@@ -206,6 +248,8 @@ data:banteng a ff:FaunaEntry,
     ff:hasOrder data:order_artiodactyla ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Bos_javanicus_javanicus.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bos_javanicus_javanicus.jpg?width=1200" ;
     ff:indonesianName "Banteng"@id ;
     ff:scientificName "Bos javanicus" ;
     ff:scientificSynonym "Bos banteng",
@@ -217,6 +261,8 @@ data:banteng a ff:FaunaEntry,
 data:bekantan a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "bekantan (Nasalis larvatus)" ;
+    ff:description "bekantan (Nasalis larvatus) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Cercopithecidae dan genus Nasalis. Nama Inggris yang tercatat adalah Proboscis Monkey." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Proboscis Monkey"@en ;
     ff:entryId "bekantan" ;
     ff:hasCategory data:category_mammalia ;
@@ -226,6 +272,8 @@ data:bekantan a ff:FaunaEntry,
     ff:hasOrder data:order_primates ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Proboscis_Monkey_in_Borneo.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Proboscis_Monkey_in_Borneo.jpg?width=1200" ;
     ff:indonesianName "bekantan"@id ;
     ff:scientificName "Nasalis larvatus" ;
     ff:scientificSynonym "Cercopithecus larvatus",
@@ -239,6 +287,8 @@ data:bekantan a ff:FaunaEntry,
 data:belimbing a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Belimbing (Averrhoa carambola)" ;
+    ff:description "Belimbing (Averrhoa carambola) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Oxalidaceae dan genus Averrhoa. Nama Inggris yang tercatat adalah star fruit." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "star fruit"@en ;
     ff:entryId "belimbing" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -248,6 +298,8 @@ data:belimbing a ff:FloraEntry,
     ff:hasOrder data:order_oxalidales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Averrhoa_carambola2.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Averrhoa_carambola2.jpg?width=1200" ;
     ff:indonesianName "Belimbing"@id ;
     ff:scientificName "Averrhoa carambola" ;
     ff:scientificSynonym "Averrhoa acutangula",
@@ -261,6 +313,8 @@ data:belimbing a ff:FloraEntry,
 data:beringin a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Beringin (Ficus benjamina)" ;
+    ff:description "Beringin (Ficus benjamina) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Moraceae dan genus Ficus. Nama Inggris yang tercatat adalah weeping fig." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "weeping fig"@en ;
     ff:entryId "beringin" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -270,6 +324,8 @@ data:beringin a ff:FloraEntry,
     ff:hasOrder data:order_rosales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Ficus_benjamina2.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ficus_benjamina2.jpg?width=1200" ;
     ff:indonesianName "Beringin"@id ;
     ff:scientificName "Ficus benjamina" ;
     ff:scientificSynonym "Ficus benjamina benjamina",
@@ -282,6 +338,8 @@ data:beringin a ff:FloraEntry,
 data:beruang_madu a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Beruang madu (Helarctos malayanus)" ;
+    ff:description "Beruang madu (Helarctos malayanus) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Ursidae dan genus Helarctos. Nama Inggris yang tercatat adalah Sun Bear." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Sun Bear"@en ;
     ff:entryId "beruang_madu" ;
     ff:hasCategory data:category_mammalia ;
@@ -291,6 +349,8 @@ data:beruang_madu a ff:FaunaEntry,
     ff:hasOrder data:order_carnivora ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Sitting_sun_bear.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sitting_sun_bear.jpg?width=1200" ;
     ff:indonesianName "Beruang madu"@id ;
     ff:scientificName "Helarctos malayanus" ;
     ff:scientificSynonym "Helarctos euryspilus",
@@ -301,6 +361,8 @@ data:beruang_madu a ff:FaunaEntry,
 data:binturong a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Binturung (Arctictis binturong)" ;
+    ff:description "Binturung (Arctictis binturong) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Viverridae dan genus Arctictis. Nama Inggris yang tercatat adalah binturong." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "binturong"@en ;
     ff:entryId "binturong" ;
     ff:hasCategory data:category_mammalia ;
@@ -310,6 +372,8 @@ data:binturong a ff:FaunaEntry,
     ff:hasOrder data:order_carnivora ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Binturong_in_Overloon.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Binturong_in_Overloon.jpg?width=1200" ;
     ff:indonesianName "Binturung"@id ;
     ff:scientificName "Arctictis binturong" ;
     ff:scientificSynonym "Ictides albifrons",
@@ -322,6 +386,8 @@ data:binturong a ff:FaunaEntry,
 data:buaya_muara a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Buaya muara (Crocodylus porosus)" ;
+    ff:description "Buaya muara (Crocodylus porosus) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Crocodylia. Spesies ini tercatat pada family Crocodylidae dan genus Crocodylus. Nama Inggris yang tercatat adalah Saltwater Crocodile." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Saltwater Crocodile"@en ;
     ff:entryId "buaya_muara" ;
     ff:hasCategory data:category_crocodylia ;
@@ -331,6 +397,8 @@ data:buaya_muara a ff:FaunaEntry,
     ff:hasOrder data:order_crocodilia ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_crocodylia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Laurie%27s_crocodile_in_the_garden.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Laurie%27s_crocodile_in_the_garden.jpg?width=1200" ;
     ff:indonesianName "Buaya muara"@id ;
     ff:scientificName "Crocodylus porosus" ;
     ff:scientificSynonym "Crocodilus biporcatus",
@@ -344,6 +412,8 @@ data:buaya_muara a ff:FaunaEntry,
 data:buaya_siam a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Buaya Siam (Crocodylus siamensis)" ;
+    ff:description "Buaya Siam (Crocodylus siamensis) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Crocodylia. Spesies ini tercatat pada family Crocodylidae dan genus Crocodylus. Nama Inggris yang tercatat adalah Siamese crocodile." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Siamese crocodile"@en ;
     ff:entryId "buaya_siam" ;
     ff:hasCategory data:category_crocodylia ;
@@ -353,6 +423,8 @@ data:buaya_siam a ff:FaunaEntry,
     ff:hasOrder data:order_crocodilia ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_crocodylia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Siamese_Crocodiles_at_Samphran_Elephant_Ground_%26_Zoo_%28II%29.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Siamese_Crocodiles_at_Samphran_Elephant_Ground_%26_Zoo_%28II%29.jpg?width=1200" ;
     ff:indonesianName "Buaya Siam"@id ;
     ff:scientificName "Crocodylus siamensis" ;
     ff:scientificSynonym "Crocodilus galeatus",
@@ -363,6 +435,8 @@ data:buaya_siam a ff:FaunaEntry,
 data:bunga_bangkai_raksasa a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Bunga bangkai (Amorphophallus titanum)" ;
+    ff:description "Bunga bangkai (Amorphophallus titanum) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Liliopsida. Spesies ini tercatat pada family Araceae dan genus Amorphophallus. Nama Inggris yang tercatat adalah Titan Arum." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Titan Arum"@en ;
     ff:entryId "bunga_bangkai_raksasa" ;
     ff:hasCategory data:category_liliopsida ;
@@ -372,6 +446,8 @@ data:bunga_bangkai_raksasa a ff:FloraEntry,
     ff:hasOrder data:order_alismatales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_liliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Titan-arum1web.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Titan-arum1web.jpg?width=1200" ;
     ff:indonesianName "Bunga bangkai"@id ;
     ff:scientificName "Amorphophallus titanum" ;
     ff:scientificSynonym "Amorphophallus selebicus",
@@ -383,6 +459,8 @@ data:bunga_bangkai_raksasa a ff:FloraEntry,
 data:cemara_laut a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "cemara laut (Casuarina equisetifolia)" ;
+    ff:description "cemara laut (Casuarina equisetifolia) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Casuarinaceae dan genus Casuarina. Nama Inggris yang tercatat adalah Australian pine." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Australian pine"@en ;
     ff:entryId "cemara_laut" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -392,6 +470,8 @@ data:cemara_laut a ff:FloraEntry,
     ff:hasOrder data:order_fagales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Casuarina_equesitifolia_tree.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Casuarina_equesitifolia_tree.jpg?width=1200" ;
     ff:indonesianName "cemara laut"@id ;
     ff:scientificName "Casuarina equisetifolia" ;
     ff:scientificSynonym "Casuarina equisetifolia",
@@ -404,6 +484,8 @@ data:cemara_laut a ff:FloraEntry,
 data:cendana a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Cendana (Santalum album)" ;
+    ff:description "Cendana (Santalum album) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Santalaceae dan genus Santalum. Nama Inggris yang tercatat adalah Indian Sandalwood." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Indian Sandalwood"@en ;
     ff:entryId "cendana" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -413,6 +495,8 @@ data:cendana a ff:FloraEntry,
     ff:hasOrder data:order_santalales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Santalum_album_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-128.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Santalum_album_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-128.jpg?width=1200" ;
     ff:indonesianName "Cendana"@id ;
     ff:scientificName "Santalum album" ;
     ff:scientificSynonym "Santalum ellipticum",
@@ -424,6 +508,8 @@ data:cendana a ff:FloraEntry,
 data:cenderawasih_besar a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "cenderawasih kuning-besar (Paradisaea apoda)" ;
+    ff:description "cenderawasih kuning-besar (Paradisaea apoda) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Aves. Spesies ini tercatat pada family Paradisaeidae dan genus Paradisaea. Nama Inggris yang tercatat adalah Greater Bird-of-paradise." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Greater Bird-of-paradise"@en ;
     ff:entryId "cenderawasih_besar" ;
     ff:hasCategory data:category_aves ;
@@ -433,6 +519,8 @@ data:cenderawasih_besar a ff:FaunaEntry,
     ff:hasOrder data:order_passeriformes ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_aves ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Paradisaea_apoda_-Bali_Bird_Park-6.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Paradisaea_apoda_-Bali_Bird_Park-6.jpg?width=1200" ;
     ff:indonesianName "cenderawasih kuning-besar"@id ;
     ff:scientificName "Paradisaea apoda" ;
     ff:searchText "paradisaea apoda cenderawasih kuning-besar greater bird-of-paradise animalia chordata aves passeriformes paradisaeidae paradisaea aves -" ;
@@ -441,6 +529,8 @@ data:cenderawasih_besar a ff:FaunaEntry,
 data:cenderawasih_kecil a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "cenderawasih kuning-kecil (Paradisaea minor)" ;
+    ff:description "cenderawasih kuning-kecil (Paradisaea minor) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Aves. Spesies ini tercatat pada family Paradisaeidae dan genus Paradisaea. Nama Inggris yang tercatat adalah Lesser Bird-of-paradise." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Lesser Bird-of-paradise"@en ;
     ff:entryId "cenderawasih_kecil" ;
     ff:hasCategory data:category_aves ;
@@ -450,6 +540,8 @@ data:cenderawasih_kecil a ff:FaunaEntry,
     ff:hasOrder data:order_passeriformes ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_aves ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Lesser_Bird_of_Paradise.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lesser_Bird_of_Paradise.jpg?width=1200" ;
     ff:indonesianName "cenderawasih kuning-kecil"@id ;
     ff:scientificName "Paradisaea minor" ;
     ff:searchText "paradisaea minor cenderawasih kuning-kecil lesser bird-of-paradise animalia chordata aves passeriformes paradisaeidae paradisaea aves -" ;
@@ -458,6 +550,8 @@ data:cenderawasih_kecil a ff:FaunaEntry,
 data:cenderawasih_raja a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "cenderawasih raja (Cicinnurus regius)" ;
+    ff:description "cenderawasih raja (Cicinnurus regius) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Aves. Spesies ini tercatat pada family Paradisaeidae dan genus Cicinnurus. Nama Inggris yang tercatat adalah King Bird-of-paradise." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "King Bird-of-paradise"@en ;
     ff:entryId "cenderawasih_raja" ;
     ff:hasCategory data:category_aves ;
@@ -467,6 +561,8 @@ data:cenderawasih_raja a ff:FaunaEntry,
     ff:hasOrder data:order_passeriformes ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_aves ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Cicinnurus_regius-20031005.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cicinnurus_regius-20031005.jpg?width=1200" ;
     ff:indonesianName "cenderawasih raja"@id ;
     ff:scientificName "Cicinnurus regius" ;
     ff:scientificSynonym "Paradisaea regia" ;
@@ -476,6 +572,8 @@ data:cenderawasih_raja a ff:FaunaEntry,
 data:cengkih a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Cengkih (Syzygium aromaticum)" ;
+    ff:description "Cengkih (Syzygium aromaticum) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Myrtaceae dan genus Syzygium. Nama Inggris yang tercatat adalah clove." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "clove"@en ;
     ff:entryId "cengkih" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -485,6 +583,8 @@ data:cengkih a ff:FloraEntry,
     ff:hasOrder data:order_myrtales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Cengkih.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cengkih.jpg?width=1200" ;
     ff:indonesianName "Cengkih"@id ;
     ff:scientificName "Syzygium aromaticum" ;
     ff:scientificSynonym "Caryophyllus aromaticus",
@@ -497,6 +597,8 @@ data:cengkih a ff:FloraEntry,
 data:duku a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Duku (Lansium domesticum)" ;
+    ff:description "Duku (Lansium domesticum) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Meliaceae dan genus Lansium. Nama Inggris yang tercatat adalah langsat." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "langsat"@en ;
     ff:entryId "duku" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -506,6 +608,8 @@ data:duku a ff:FloraEntry,
     ff:hasOrder data:order_sapindales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Lanzones.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lanzones.jpg?width=1200" ;
     ff:indonesianName "Duku"@id ;
     ff:scientificName "Lansium domesticum" ;
     ff:scientificSynonym "Aglaia aquea",
@@ -519,6 +623,8 @@ data:duku a ff:FloraEntry,
 data:durian a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Durian (Durio zibethinus)" ;
+    ff:description "Durian (Durio zibethinus) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Malvaceae dan genus Durio. Nama Inggris yang tercatat adalah durian." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "durian"@en ;
     ff:entryId "durian" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -528,6 +634,8 @@ data:durian a ff:FloraEntry,
     ff:hasOrder data:order_malvales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Durian_Fruit.JPG" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Durian_Fruit.JPG?width=1200" ;
     ff:indonesianName "Durian"@id ;
     ff:scientificName "Durio zibethinus" ;
     ff:scientificSynonym "Durio acuminatissima",
@@ -538,6 +646,8 @@ data:durian a ff:FloraEntry,
 data:duyung a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Dugong (Dugong dugon)" ;
+    ff:description "Dugong (Dugong dugon) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Dugongidae dan genus Dugong. Nama Inggris yang tercatat adalah dugong." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "dugong"@en ;
     ff:entryId "duyung" ;
     ff:hasCategory data:category_mammalia ;
@@ -547,6 +657,8 @@ data:duyung a ff:FaunaEntry,
     ff:hasOrder data:order_sirenia ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Dugong_Marsa_Alam.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dugong_Marsa_Alam.jpg?width=1200" ;
     ff:indonesianName "Dugong"@id ;
     ff:scientificName "Dugong dugon" ;
     ff:scientificSynonym "Dugong dugon",
@@ -560,6 +672,8 @@ data:duyung a ff:FaunaEntry,
 data:elang_jawa a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Elang jawa (Nisaetus bartelsi)" ;
+    ff:description "Elang jawa (Nisaetus bartelsi) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Aves. Spesies ini tercatat pada family Accipitridae dan genus Nisaetus. Nama Inggris yang tercatat adalah Javan hawk-eagle." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Javan hawk-eagle"@en ;
     ff:entryId "elang_jawa" ;
     ff:hasCategory data:category_aves ;
@@ -569,6 +683,8 @@ data:elang_jawa a ff:FaunaEntry,
     ff:hasOrder data:order_accipitriformes ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_aves ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:ELJA.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/ELJA.jpg?width=1200" ;
     ff:indonesianName "Elang jawa"@id ;
     ff:scientificName "Nisaetus bartelsi" ;
     ff:scientificSynonym "Spizaetus bartelsi" ;
@@ -578,6 +694,8 @@ data:elang_jawa a ff:FaunaEntry,
 data:gaharu a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Gaharu (Aquilaria malaccensis)" ;
+    ff:description "Gaharu (Aquilaria malaccensis) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Thymelaeaceae dan genus Aquilaria. Nama Inggris yang tercatat adalah Agarwood." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Agarwood"@en ;
     ff:entryId "gaharu" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -587,6 +705,8 @@ data:gaharu a ff:FloraEntry,
     ff:hasOrder data:order_malvales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Aquilaria_malaccensis_-_Agar_Wood%2C_Eaglewood_-_Indian_Aloewood_at_Munnar_%284%29.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Aquilaria_malaccensis_-_Agar_Wood%2C_Eaglewood_-_Indian_Aloewood_at_Munnar_%284%29.jpg?width=1200" ;
     ff:indonesianName "Gaharu"@id ;
     ff:scientificName "Aquilaria malaccensis" ;
     ff:scientificSynonym "Aquilaria agallocha",
@@ -599,6 +719,8 @@ data:gaharu a ff:FloraEntry,
 data:gajah_sumatra a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Gajah Asia (Elephas maximus)" ;
+    ff:description "Gajah Asia (Elephas maximus) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Elephantidae dan genus Elephas. Nama Inggris yang tercatat adalah Asian elephant." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Asian elephant"@en ;
     ff:entryId "gajah_sumatra" ;
     ff:hasCategory data:category_mammalia ;
@@ -608,6 +730,8 @@ data:gajah_sumatra a ff:FaunaEntry,
     ff:hasOrder data:order_proboscidea ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Elephas_maximus_%28Bandipur%29.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Elephas_maximus_%28Bandipur%29.jpg?width=1200" ;
     ff:indonesianName "Gajah Asia"@id ;
     ff:scientificName "Elephas maximus" ;
     ff:scientificSynonym "Elephas asiaticus",
@@ -618,6 +742,8 @@ data:gajah_sumatra a ff:FaunaEntry,
 data:harimau a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "harimau (Panthera tigris)" ;
+    ff:description "harimau (Panthera tigris) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Felidae dan genus Panthera. Nama Inggris yang tercatat adalah tiger." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "tiger"@en ;
     ff:entryId "harimau" ;
     ff:hasCategory data:category_mammalia ;
@@ -627,6 +753,8 @@ data:harimau a ff:FaunaEntry,
     ff:hasOrder data:order_carnivora ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Adult_male_Royal_Bengal_tiger.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Adult_male_Royal_Bengal_tiger.jpg?width=1200" ;
     ff:indonesianName "harimau"@id ;
     ff:scientificName "Panthera tigris" ;
     ff:scientificSynonym "Felis tigris" ;
@@ -636,6 +764,8 @@ data:harimau a ff:FaunaEntry,
 data:ikan_raja_laut a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Coelacanth Indonesia (Latimeria menadoensis)" ;
+    ff:description "Coelacanth Indonesia (Latimeria menadoensis) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Coelacanthi. Spesies ini tercatat pada family Latimeriidae dan genus Latimeria. Nama Inggris yang tercatat adalah Sulawesi Coelacanth." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Sulawesi Coelacanth"@en ;
     ff:entryId "ikan_raja_laut" ;
     ff:hasCategory data:category_coelacanthi ;
@@ -645,6 +775,8 @@ data:ikan_raja_laut a ff:FaunaEntry,
     ff:hasOrder data:order_coelacanthiformes ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_coelacanthi ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Latimeria_menadoensis.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Latimeria_menadoensis.jpg?width=1200" ;
     ff:indonesianName "Coelacanth Indonesia"@id ;
     ff:scientificName "Latimeria menadoensis" ;
     ff:searchText "latimeria menadoensis coelacanth indonesia sulawesi coelacanth animalia chordata coelacanthi coelacanthiformes latimeriidae latimeria coelacanthi -" ;
@@ -653,6 +785,8 @@ data:ikan_raja_laut a ff:FaunaEntry,
 data:jahe a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "jahe (Zingiber officinale)" ;
+    ff:description "jahe (Zingiber officinale) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Liliopsida. Spesies ini tercatat pada family Zingiberaceae dan genus Zingiber. Nama Inggris yang tercatat adalah ginger." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "ginger"@en ;
     ff:entryId "jahe" ;
     ff:hasCategory data:category_liliopsida ;
@@ -662,6 +796,8 @@ data:jahe a ff:FloraEntry,
     ff:hasOrder data:order_zingiberales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_liliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Ginger_Plant_vs.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ginger_Plant_vs.jpg?width=1200" ;
     ff:indonesianName "jahe"@id ;
     ff:scientificName "Zingiber officinale" ;
     ff:scientificSynonym "Amomum angustifolium",
@@ -675,6 +811,8 @@ data:jahe a ff:FloraEntry,
 data:jalak_bali a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "jalak bali (Leucopsar rothschildi)" ;
+    ff:description "jalak bali (Leucopsar rothschildi) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Aves. Spesies ini tercatat pada family Sturnidae dan genus Leucopsar. Nama Inggris yang tercatat adalah Bali Myna." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Bali Myna"@en ;
     ff:entryId "jalak_bali" ;
     ff:hasCategory data:category_aves ;
@@ -684,6 +822,8 @@ data:jalak_bali a ff:FaunaEntry,
     ff:hasOrder data:order_passeriformes ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_aves ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Bali_Myna_0A2A9443.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bali_Myna_0A2A9443.jpg?width=1200" ;
     ff:indonesianName "jalak bali"@id ;
     ff:scientificName "Leucopsar rothschildi" ;
     ff:searchText "leucopsar rothschildi jalak bali bali myna animalia chordata aves passeriformes sturnidae leucopsar aves -" ;
@@ -692,6 +832,8 @@ data:jalak_bali a ff:FaunaEntry,
 data:jati a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Jati (Tectona grandis)" ;
+    ff:description "Jati (Tectona grandis) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Lamiaceae dan genus Tectona. Nama Inggris yang tercatat adalah Teak." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Teak"@en ;
     ff:entryId "jati" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -701,6 +843,8 @@ data:jati a ff:FloraEntry,
     ff:hasOrder data:order_lamiales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Starr_010304-0485_Tectona_grandis.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Starr_010304-0485_Tectona_grandis.jpg?width=1200" ;
     ff:indonesianName "Jati"@id ;
     ff:scientificName "Tectona grandis" ;
     ff:scientificSynonym "Jatus grandis",
@@ -714,6 +858,8 @@ data:jati a ff:FloraEntry,
 data:jengkol a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "jengkol (Archidendron pauciflorum)" ;
+    ff:description "jengkol (Archidendron pauciflorum) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Fabaceae dan genus Archidendron. Nama Inggris yang tercatat adalah Djenkol Tree." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Djenkol Tree"@en ;
     ff:entryId "jengkol" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -723,6 +869,8 @@ data:jengkol a ff:FloraEntry,
     ff:hasOrder data:order_fabales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Pithecellobium_jiringa.JPG" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pithecellobium_jiringa.JPG?width=1200" ;
     ff:indonesianName "jengkol"@id ;
     ff:scientificName "Archidendron pauciflorum" ;
     ff:scientificSynonym "Abarema malinoensis pauciflorum",
@@ -734,6 +882,8 @@ data:jengkol a ff:FloraEntry,
 data:kakao a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Kakao (Theobroma cacao)" ;
+    ff:description "Kakao (Theobroma cacao) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Malvaceae dan genus Theobroma. Nama Inggris yang tercatat adalah cacao." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "cacao"@en ;
     ff:entryId "kakao" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -743,6 +893,8 @@ data:kakao a ff:FloraEntry,
     ff:hasOrder data:order_malvales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Digital_Inclusion_in_the_Peruvian_Amazon_-_48138694956.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Digital_Inclusion_in_the_Peruvian_Amazon_-_48138694956.jpg?width=1200" ;
     ff:indonesianName "Kakao"@id ;
     ff:scientificName "Theobroma cacao" ;
     ff:scientificSynonym "Cacao minar",
@@ -755,6 +907,8 @@ data:kakao a ff:FloraEntry,
 data:kakatua_kecil_jambul_kuning a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "kakatua-kecil jambul-kuning (Cacatua sulphurea)" ;
+    ff:description "kakatua-kecil jambul-kuning (Cacatua sulphurea) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Aves. Spesies ini tercatat pada family Psittacidae dan genus Cacatua. Nama Inggris yang tercatat adalah Yellow-crested Cockatoo." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Yellow-crested Cockatoo"@en ;
     ff:entryId "kakatua_kecil_jambul_kuning" ;
     ff:hasCategory data:category_aves ;
@@ -764,6 +918,8 @@ data:kakatua_kecil_jambul_kuning a ff:FaunaEntry,
     ff:hasOrder data:order_psittaciformes ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_aves ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Gelbwangenkakadu_8559.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Gelbwangenkakadu_8559.jpg?width=1200" ;
     ff:indonesianName "kakatua-kecil jambul-kuning"@id ;
     ff:scientificName "Cacatua sulphurea" ;
     ff:scientificSynonym "Cacatura sulphurea",
@@ -774,6 +930,8 @@ data:kakatua_kecil_jambul_kuning a ff:FaunaEntry,
 data:kakatua_raja a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "kakatua raja (Probosciger aterrimus)" ;
+    ff:description "kakatua raja (Probosciger aterrimus) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Aves. Spesies ini tercatat pada family Psittacidae dan genus Probosciger. Nama Inggris yang tercatat adalah Palm Cockatoo." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Palm Cockatoo"@en ;
     ff:entryId "kakatua_raja" ;
     ff:hasCategory data:category_aves ;
@@ -783,6 +941,8 @@ data:kakatua_raja a ff:FaunaEntry,
     ff:hasOrder data:order_psittaciformes ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_aves ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Probosciger_aterrimus%2C_Cape_York_1.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Probosciger_aterrimus%2C_Cape_York_1.jpg?width=1200" ;
     ff:indonesianName "kakatua raja"@id ;
     ff:scientificName "Probosciger aterrimus" ;
     ff:scientificSynonym "Probosciger aterrinus",
@@ -793,6 +953,8 @@ data:kakatua_raja a ff:FaunaEntry,
 data:kantong_semar a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Kantong Semar (Nepenthes gymnamphora)" ;
+    ff:description "Kantong Semar (Nepenthes gymnamphora) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Nepenthaceae dan genus Nepenthes. Nama Inggris yang tercatat adalah Tropical Pitcher Plant." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Tropical Pitcher Plant"@en ;
     ff:entryId "kantong_semar" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -802,6 +964,8 @@ data:kantong_semar a ff:FloraEntry,
     ff:hasOrder data:order_caryophyllales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Npectinata.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Npectinata.jpg?width=1200" ;
     ff:indonesianName "Kantong Semar"@id ;
     ff:scientificName "Nepenthes gymnamphora" ;
     ff:scientificSynonym "Nepenthes glabra",
@@ -814,6 +978,8 @@ data:kantong_semar a ff:FloraEntry,
 data:kayu_manis a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Cinnamomum burmannii (Cinnamomum burmanni)" ;
+    ff:description "Cinnamomum burmannii (Cinnamomum burmanni) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Lauraceae dan genus Cinnamomum. Nama Inggris yang tercatat adalah Malaysian cinnamon." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Malaysian cinnamon"@en ;
     ff:entryId "kayu_manis" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -823,6 +989,8 @@ data:kayu_manis a ff:FloraEntry,
     ff:hasOrder data:order_laurales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Zimtbaum.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Zimtbaum.jpg?width=1200" ;
     ff:indonesianName "Cinnamomum burmannii"@id ;
     ff:scientificName "Cinnamomum burmanni" ;
     ff:scientificSynonym "Cinnamomum ammannii",
@@ -836,6 +1004,8 @@ data:kayu_manis a ff:FloraEntry,
 data:kayu_putih a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "gelam (Melaleuca cajuputi)" ;
+    ff:description "gelam (Melaleuca cajuputi) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Myrtaceae dan genus Melaleuca. Nama Inggris yang tercatat adalah Cajuput." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Cajuput"@en ;
     ff:entryId "kayu_putih" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -845,6 +1015,8 @@ data:kayu_putih a ff:FloraEntry,
     ff:hasOrder data:order_myrtales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Cajeput_%282923282356%29.png" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cajeput_%282923282356%29.png?width=1200" ;
     ff:indonesianName "gelam"@id ;
     ff:scientificName "Melaleuca cajuputi" ;
     ff:searchText "melaleuca cajuputi gelam cajuput plantae tracheophyta magnoliopsida myrtales myrtaceae melaleuca magnoliopsida -" ;
@@ -853,6 +1025,8 @@ data:kayu_putih a ff:FloraEntry,
 data:kecombrang a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Kecombrang (Etlingera elatior)" ;
+    ff:description "Kecombrang (Etlingera elatior) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Liliopsida. Spesies ini tercatat pada family Zingiberaceae dan genus Etlingera. Nama Inggris yang tercatat adalah Torch Ginger." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Torch Ginger"@en ;
     ff:entryId "kecombrang" ;
     ff:hasCategory data:category_liliopsida ;
@@ -862,6 +1036,8 @@ data:kecombrang a ff:FloraEntry,
     ff:hasOrder data:order_zingiberales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_liliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Etlingera_elatior_dsc03700.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Etlingera_elatior_dsc03700.jpg?width=1200" ;
     ff:indonesianName "Kecombrang"@id ;
     ff:scientificName "Etlingera elatior" ;
     ff:scientificSynonym "Alpinia acrostachya",
@@ -875,6 +1051,8 @@ data:kecombrang a ff:FloraEntry,
 data:kelapa a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "kelapa (Cocos nucifera)" ;
+    ff:description "kelapa (Cocos nucifera) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Liliopsida. Spesies ini tercatat pada family Arecaceae dan genus Cocos. Nama Inggris yang tercatat adalah coconut palm." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "coconut palm"@en ;
     ff:entryId "kelapa" ;
     ff:hasCategory data:category_liliopsida ;
@@ -884,6 +1062,8 @@ data:kelapa a ff:FloraEntry,
     ff:hasOrder data:order_arecales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_liliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:1859-Martinique.web.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/1859-Martinique.web.jpg?width=1200" ;
     ff:indonesianName "kelapa"@id ;
     ff:scientificName "Cocos nucifera" ;
     ff:scientificSynonym "Calappa nucifera",
@@ -897,6 +1077,8 @@ data:kelapa a ff:FloraEntry,
 data:kemiri a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Kemiri (Aleurites moluccanus)" ;
+    ff:description "Kemiri (Aleurites moluccanus) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Euphorbiaceae dan genus Aleurites. Nama Inggris yang tercatat adalah Candlenut Tree." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Candlenut Tree"@en ;
     ff:entryId "kemiri" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -906,6 +1088,8 @@ data:kemiri a ff:FloraEntry,
     ff:hasOrder data:order_malpighiales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Starr_020803-0119_Aleurites_moluccana.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Starr_020803-0119_Aleurites_moluccana.jpg?width=1200" ;
     ff:indonesianName "Kemiri"@id ;
     ff:scientificName "Aleurites moluccanus" ;
     ff:scientificSynonym "Aleurites ambinux",
@@ -918,6 +1102,8 @@ data:kemiri a ff:FloraEntry,
 data:ketapang a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Ketapang (Terminalia catappa)" ;
+    ff:description "Ketapang (Terminalia catappa) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Combretaceae dan genus Terminalia. Nama Inggris yang tercatat adalah India almond." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "India almond"@en ;
     ff:entryId "ketapang" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -927,6 +1113,8 @@ data:ketapang a ff:FloraEntry,
     ff:hasOrder data:order_myrtales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:01423jfCapalangan_Sulipan_Apalit_Pampanga_Peters_Trees_Shrinesfvf_20.JPG" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/01423jfCapalangan_Sulipan_Apalit_Pampanga_Peters_Trees_Shrinesfvf_20.JPG?width=1200" ;
     ff:indonesianName "Ketapang"@id ;
     ff:scientificName "Terminalia catappa" ;
     ff:scientificSynonym "Buceras catappa",
@@ -939,6 +1127,8 @@ data:ketapang a ff:FloraEntry,
 data:komodo a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "komodo (Varanus komodoensis)" ;
+    ff:description "komodo (Varanus komodoensis) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Reptilia. Spesies ini tercatat pada family Varanidae dan genus Varanus. Nama Inggris yang tercatat adalah Komodo dragon." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Komodo dragon"@en ;
     ff:entryId "komodo" ;
     ff:hasCategory data:category_reptilia ;
@@ -948,6 +1138,8 @@ data:komodo a ff:FaunaEntry,
     ff:hasOrder data:order_squamata ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_reptilia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Komodo_dragon_Varanus_komodoensis_Ragunan_Zoo_2.JPG" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Komodo_dragon_Varanus_komodoensis_Ragunan_Zoo_2.JPG?width=1200" ;
     ff:indonesianName "komodo"@id ;
     ff:scientificName "Varanus komodoensis" ;
     ff:searchText "varanus komodoensis komodo komodo dragon animalia chordata reptilia squamata varanidae varanus reptilia -" ;
@@ -956,6 +1148,8 @@ data:komodo a ff:FaunaEntry,
 data:kopi_arabika a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Kopi arabika (Coffea arabica)" ;
+    ff:description "Kopi arabika (Coffea arabica) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Rubiaceae dan genus Coffea. Nama Inggris yang tercatat adalah Arabica Coffee." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Arabica Coffee"@en ;
     ff:entryId "kopi_arabika" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -965,6 +1159,8 @@ data:kopi_arabika a ff:FloraEntry,
     ff:hasOrder data:order_gentianales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Coffee_Flowers.JPG" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Coffee_Flowers.JPG?width=1200" ;
     ff:indonesianName "Kopi arabika"@id ;
     ff:scientificName "Coffea arabica" ;
     ff:scientificSynonym "Coffea arabica abyssinica",
@@ -977,6 +1173,8 @@ data:kopi_arabika a ff:FloraEntry,
 data:kopi_robusta a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Robusta (Coffea canephora)" ;
+    ff:description "Robusta (Coffea canephora) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Rubiaceae dan genus Coffea. Nama Inggris yang tercatat adalah Robusta Coffee." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Robusta Coffee"@en ;
     ff:entryId "kopi_robusta" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -986,6 +1184,8 @@ data:kopi_robusta a ff:FloraEntry,
     ff:hasOrder data:order_gentianales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Coffea_canephora_berries.JPG" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Coffea_canephora_berries.JPG?width=1200" ;
     ff:indonesianName "Robusta"@id ;
     ff:scientificName "Coffea canephora" ;
     ff:scientificSynonym "Coffea arabica stuhlmannii",
@@ -998,6 +1198,8 @@ data:kopi_robusta a ff:FloraEntry,
 data:kucing a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Kucing Domestik (Felis catus)" ;
+    ff:description "Kucing Domestik (Felis catus) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Felidae dan genus Felis. Nama Inggris yang tercatat adalah Domestic Cat." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Domestic Cat"@en ;
     ff:entryId "kucing" ;
     ff:hasCategory data:category_mammalia ;
@@ -1007,6 +1209,8 @@ data:kucing a ff:FaunaEntry,
     ff:hasOrder data:order_carnivora ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Cat_November_2010-1a.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cat_November_2010-1a.jpg?width=1200" ;
     ff:indonesianName "Kucing Domestik"@id ;
     ff:scientificName "Felis catus" ;
     ff:scientificSynonym "Felis catus domestica",
@@ -1020,6 +1224,8 @@ data:kucing a ff:FaunaEntry,
 data:kucing_kuwuk a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Kucing kuwuk (Prionailurus bengalensis)" ;
+    ff:description "Kucing kuwuk (Prionailurus bengalensis) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Felidae dan genus Prionailurus. Nama Inggris yang tercatat adalah leopard cat." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "leopard cat"@en ;
     ff:entryId "kucing_kuwuk" ;
     ff:hasCategory data:category_mammalia ;
@@ -1029,6 +1235,8 @@ data:kucing_kuwuk a ff:FaunaEntry,
     ff:hasOrder data:order_carnivora ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Close-up_of_a_Leopard_Cat_in_Sundarban.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Close-up_of_a_Leopard_Cat_in_Sundarban.jpg?width=1200" ;
     ff:indonesianName "Kucing kuwuk"@id ;
     ff:scientificName "Prionailurus bengalensis" ;
     ff:scientificSynonym "Felis bengalensis" ;
@@ -1038,6 +1246,8 @@ data:kucing_kuwuk a ff:FaunaEntry,
 data:kunyit a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "kunyit (Curcuma longa)" ;
+    ff:description "kunyit (Curcuma longa) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Liliopsida. Spesies ini tercatat pada family Zingiberaceae dan genus Curcuma. Nama Inggris yang tercatat adalah Turmeric." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Turmeric"@en ;
     ff:entryId "kunyit" ;
     ff:hasCategory data:category_liliopsida ;
@@ -1047,6 +1257,8 @@ data:kunyit a ff:FloraEntry,
     ff:hasOrder data:order_zingiberales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_liliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Curcuma_longa_%28Haldi%29_W_IMG_2440.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Curcuma_longa_%28Haldi%29_W_IMG_2440.jpg?width=1200" ;
     ff:indonesianName "kunyit"@id ;
     ff:scientificName "Curcuma longa" ;
     ff:scientificSynonym "Amomum curcuma",
@@ -1058,6 +1270,8 @@ data:kunyit a ff:FloraEntry,
 data:kupu_kupu_sayap_burung_surga a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Kupu-kupu sayap-burung surga (Ornithoptera paradisea)" ;
+    ff:description "Kupu-kupu sayap-burung surga (Ornithoptera paradisea) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Arthropoda, dan kelas Insecta. Spesies ini tercatat pada family Papilionidae dan genus Ornithoptera. Nama Inggris yang tercatat adalah Paradise Birdwing." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Paradise Birdwing"@en ;
     ff:entryId "kupu_kupu_sayap_burung_surga" ;
     ff:hasCategory data:category_insecta ;
@@ -1067,6 +1281,8 @@ data:kupu_kupu_sayap_burung_surga a ff:FaunaEntry,
     ff:hasOrder data:order_lepidoptera ;
     ff:hasPhylum data:phylum_arthropoda ;
     ff:hasTaxonomicClass data:class_insecta ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Paradisea_male_P3010006.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Paradisea_male_P3010006.jpg?width=1200" ;
     ff:indonesianName "Kupu-kupu sayap-burung surga"@id ;
     ff:scientificName "Ornithoptera paradisea" ;
     ff:scientificSynonym "Troides paradisea",
@@ -1077,6 +1293,8 @@ data:kupu_kupu_sayap_burung_surga a ff:FaunaEntry,
 data:kupu_kupu_sayap_burung_wallace a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Kupu Kupu Sayap Burung Wallace (Ornithoptera croesus)" ;
+    ff:description "Kupu Kupu Sayap Burung Wallace (Ornithoptera croesus) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Arthropoda, dan kelas Insecta. Spesies ini tercatat pada family Papilionidae dan genus Ornithoptera. Nama Inggris yang tercatat adalah Wallace's Golden Birdwing." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Wallace's Golden Birdwing"@en ;
     ff:entryId "kupu_kupu_sayap_burung_wallace" ;
     ff:hasCategory data:category_insecta ;
@@ -1086,6 +1304,8 @@ data:kupu_kupu_sayap_burung_wallace a ff:FaunaEntry,
     ff:hasOrder data:order_lepidoptera ;
     ff:hasPhylum data:phylum_arthropoda ;
     ff:hasTaxonomicClass data:class_insecta ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Ocroesus.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ocroesus.jpg?width=1200" ;
     ff:indonesianName "Kupu Kupu Sayap Burung Wallace"@id ;
     ff:scientificName "Ornithoptera croesus" ;
     ff:scientificSynonym "Ornithoptera croesus toeantei",
@@ -1096,6 +1316,8 @@ data:kupu_kupu_sayap_burung_wallace a ff:FaunaEntry,
 data:kuskus_beruang_sulawesi a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "kuskus beruang sulawesi (Ailurops ursinus)" ;
+    ff:description "kuskus beruang sulawesi (Ailurops ursinus) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Phalangeridae dan genus Ailurops. Nama Inggris yang tercatat adalah Bear Cuscus." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Bear Cuscus"@en ;
     ff:entryId "kuskus_beruang_sulawesi" ;
     ff:hasCategory data:category_mammalia ;
@@ -1105,6 +1327,8 @@ data:kuskus_beruang_sulawesi a ff:FaunaEntry,
     ff:hasOrder data:order_diprotodontia ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Ailurops_ursinus_Naemundung_2_North_Sulawesi.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ailurops_ursinus_Naemundung_2_North_Sulawesi.jpg?width=1200" ;
     ff:indonesianName "kuskus beruang sulawesi"@id ;
     ff:scientificName "Ailurops ursinus" ;
     ff:scientificSynonym "? ursinus",
@@ -1115,6 +1339,8 @@ data:kuskus_beruang_sulawesi a ff:FaunaEntry,
 data:kuskus_tutul a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Kuskus Tutul (Spilocuscus maculatus)" ;
+    ff:description "Kuskus Tutul (Spilocuscus maculatus) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Phalangeridae dan genus Spilocuscus. Nama Inggris yang tercatat adalah Common spotted cuscus." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Common spotted cuscus"@en ;
     ff:entryId "kuskus_tutul" ;
     ff:hasCategory data:category_mammalia ;
@@ -1124,6 +1350,8 @@ data:kuskus_tutul a ff:FaunaEntry,
     ff:hasOrder data:order_diprotodontia ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Cuscus1.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cuscus1.jpg?width=1200" ;
     ff:indonesianName "Kuskus Tutul"@id ;
     ff:scientificName "Spilocuscus maculatus" ;
     ff:scientificSynonym "Phalanger maculatus",
@@ -1135,6 +1363,8 @@ data:kuskus_tutul a ff:FaunaEntry,
 data:lada a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "lada (Piper nigrum)" ;
+    ff:description "lada (Piper nigrum) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Piperaceae dan genus Piper. Nama Inggris yang tercatat adalah black pepper." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "black pepper"@en ;
     ff:entryId "lada" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -1144,6 +1374,8 @@ data:lada a ff:FloraEntry,
     ff:hasOrder data:order_piperales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Piper_nigrum_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-107.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Piper_nigrum_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-107.jpg?width=1200" ;
     ff:indonesianName "lada"@id ;
     ff:scientificName "Piper nigrum" ;
     ff:scientificSynonym "Muldera multinervis",
@@ -1157,6 +1389,8 @@ data:lada a ff:FloraEntry,
 data:lengkuas a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "lengkuas (Alpinia galanga)" ;
+    ff:description "lengkuas (Alpinia galanga) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Liliopsida. Spesies ini tercatat pada family Zingiberaceae dan genus Alpinia. Nama Inggris yang tercatat adalah greater galangal." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "greater galangal"@en ;
     ff:entryId "lengkuas" ;
     ff:hasCategory data:category_liliopsida ;
@@ -1166,6 +1400,8 @@ data:lengkuas a ff:FloraEntry,
     ff:hasOrder data:order_zingiberales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_liliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Maranta_galanga_Ypey51.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Maranta_galanga_Ypey51.jpg?width=1200" ;
     ff:indonesianName "lengkuas"@id ;
     ff:scientificName "Alpinia galanga" ;
     ff:scientificSynonym "Alpinia alba",
@@ -1179,6 +1415,8 @@ data:lengkuas a ff:FloraEntry,
 data:macan_dahan_sunda a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Macan dahan Sunda (Neofelis diardi)" ;
+    ff:description "Macan dahan Sunda (Neofelis diardi) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Felidae dan genus Neofelis. Nama Inggris yang tercatat adalah Sunda clouded leopard." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Sunda clouded leopard"@en ;
     ff:entryId "macan_dahan_sunda" ;
     ff:hasCategory data:category_mammalia ;
@@ -1188,6 +1426,8 @@ data:macan_dahan_sunda a ff:FaunaEntry,
     ff:hasOrder data:order_carnivora ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Borneo_clouded_leopard.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Borneo_clouded_leopard.jpg?width=1200" ;
     ff:indonesianName "Macan dahan Sunda"@id ;
     ff:scientificName "Neofelis diardi" ;
     ff:scientificSynonym "Felis diardi",
@@ -1198,6 +1438,8 @@ data:macan_dahan_sunda a ff:FaunaEntry,
 data:mahoni_daun_besar a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Mahoni (Swietenia macrophylla)" ;
+    ff:description "Mahoni (Swietenia macrophylla) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Meliaceae dan genus Swietenia. Nama Inggris yang tercatat adalah Big Leaf Mahogany." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Big Leaf Mahogany"@en ;
     ff:entryId "mahoni_daun_besar" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -1207,6 +1449,8 @@ data:mahoni_daun_besar a ff:FloraEntry,
     ff:hasOrder data:order_sapindales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Leaves_I_IMG_8668.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Leaves_I_IMG_8668.jpg?width=1200" ;
     ff:indonesianName "Mahoni"@id ;
     ff:scientificName "Swietenia macrophylla" ;
     ff:scientificSynonym "Swietenia belizensis",
@@ -1220,6 +1464,8 @@ data:mahoni_daun_besar a ff:FloraEntry,
 data:maleo a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "maleo senkawor (Macrocephalon maleo)" ;
+    ff:description "maleo senkawor (Macrocephalon maleo) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Aves. Spesies ini tercatat pada family Megapodiidae dan genus Macrocephalon. Nama Inggris yang tercatat adalah Maleo." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Maleo"@en ;
     ff:entryId "maleo" ;
     ff:hasCategory data:category_aves ;
@@ -1229,6 +1475,8 @@ data:maleo a ff:FaunaEntry,
     ff:hasOrder data:order_galliformes ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_aves ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Stavenn_Maleo.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Stavenn_Maleo.jpg?width=1200" ;
     ff:indonesianName "maleo senkawor"@id ;
     ff:scientificName "Macrocephalon maleo" ;
     ff:searchText "macrocephalon maleo maleo senkawor maleo animalia chordata aves galliformes megapodiidae macrocephalon aves -" ;
@@ -1237,6 +1485,8 @@ data:maleo a ff:FaunaEntry,
 data:mangga a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "mangga (Mangifera indica)" ;
+    ff:description "mangga (Mangifera indica) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Anacardiaceae dan genus Mangifera. Nama Inggris yang tercatat adalah Common Indian Mango." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Common Indian Mango"@en ;
     ff:entryId "mangga" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -1246,6 +1496,8 @@ data:mangga a ff:FloraEntry,
     ff:hasOrder data:order_sapindales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:The_Botanical_Magazine._Mango.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/The_Botanical_Magazine._Mango.jpg?width=1200" ;
     ff:indonesianName "mangga"@id ;
     ff:scientificName "Mangifera indica" ;
     ff:scientificSynonym "Mangifera amba",
@@ -1258,6 +1510,8 @@ data:mangga a ff:FloraEntry,
 data:manggis a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Manggis (Garcinia mangostana)" ;
+    ff:description "Manggis (Garcinia mangostana) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Clusiaceae dan genus Garcinia. Nama Inggris yang tercatat adalah Mangosteen." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Mangosteen"@en ;
     ff:entryId "manggis" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -1267,6 +1521,8 @@ data:manggis a ff:FloraEntry,
     ff:hasOrder data:order_malpighiales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Berthe_Hoola_van_Nooten48.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Berthe_Hoola_van_Nooten48.jpg?width=1200" ;
     ff:indonesianName "Manggis"@id ;
     ff:scientificName "Garcinia mangostana" ;
     ff:scientificSynonym "Mangostana garcinia" ;
@@ -1276,6 +1532,8 @@ data:manggis a ff:FloraEntry,
 data:melinjo a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Melinjo (Gnetum gnemon)" ;
+    ff:description "Melinjo (Gnetum gnemon) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Gnetopsida. Spesies ini tercatat pada family Gnetaceae dan genus Gnetum. Nama Inggris yang tercatat adalah buko." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "buko"@en ;
     ff:entryId "melinjo" ;
     ff:hasCategory data:category_gnetopsida ;
@@ -1285,6 +1543,8 @@ data:melinjo a ff:FloraEntry,
     ff:hasOrder data:order_gnetales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_gnetopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Melinjo_%28Gnetum_gnemon%29_%286863727669%29.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Melinjo_%28Gnetum_gnemon%29_%286863727669%29.jpg?width=1200" ;
     ff:indonesianName "Melinjo"@id ;
     ff:scientificName "Gnetum gnemon" ;
     ff:scientificSynonym "Gnetum domesticum",
@@ -1297,6 +1557,8 @@ data:melinjo a ff:FloraEntry,
 data:meranti_merah a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Meranti Bunga (Shorea leprosula)" ;
+    ff:description "Meranti Bunga (Shorea leprosula) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Dipterocarpaceae dan genus Shorea. Nama Inggris yang tercatat adalah Light Red Meranti." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Light Red Meranti"@en ;
     ff:entryId "meranti_merah" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -1306,6 +1568,8 @@ data:meranti_merah a ff:FloraEntry,
     ff:hasOrder data:order_malvales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Shorea_leprosula_-_feuilles.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Shorea_leprosula_-_feuilles.jpg?width=1200" ;
     ff:indonesianName "Meranti Bunga"@id ;
     ff:scientificName "Shorea leprosula" ;
     ff:scientificSynonym "Hopea maranti",
@@ -1317,6 +1581,8 @@ data:meranti_merah a ff:FloraEntry,
 data:merbau a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Merbau (Intsia bijuga)" ;
+    ff:description "Merbau (Intsia bijuga) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Fabaceae dan genus Intsia. Nama Inggris yang tercatat adalah Borneo Teak." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Borneo Teak"@en ;
     ff:entryId "merbau" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -1326,6 +1592,8 @@ data:merbau a ff:FloraEntry,
     ff:hasOrder data:order_fabales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Intsia_bijuga.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Intsia_bijuga.jpg?width=1200" ;
     ff:indonesianName "Merbau"@id ;
     ff:scientificName "Intsia bijuga" ;
     ff:scientificSynonym "Afzelia bijuga",
@@ -1339,6 +1607,8 @@ data:merbau a ff:FloraEntry,
 data:nangka a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Nangka (Artocarpus heterophyllus)" ;
+    ff:description "Nangka (Artocarpus heterophyllus) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Moraceae dan genus Artocarpus. Nama Inggris yang tercatat adalah jackfruit." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "jackfruit"@en ;
     ff:entryId "nangka" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -1348,6 +1618,8 @@ data:nangka a ff:FloraEntry,
     ff:hasOrder data:order_rosales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:The_jackfruit_is_holding_on_to_the_tree.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/The_jackfruit_is_holding_on_to_the_tree.jpg?width=1200" ;
     ff:indonesianName "Nangka"@id ;
     ff:scientificName "Artocarpus heterophyllus" ;
     ff:scientificSynonym "Artocarpus brasiliensis",
@@ -1359,6 +1631,8 @@ data:nangka a ff:FloraEntry,
 data:nipah a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Nipah (Nypa fruticans)" ;
+    ff:description "Nipah (Nypa fruticans) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Liliopsida. Spesies ini tercatat pada family Arecaceae dan genus Nypa. Nama Inggris yang tercatat adalah Nypa Palm." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Nypa Palm"@en ;
     ff:entryId "nipah" ;
     ff:hasCategory data:category_liliopsida ;
@@ -1368,6 +1642,8 @@ data:nipah a ff:FloraEntry,
     ff:hasOrder data:order_arecales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_liliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Nipa_palms.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Nipa_palms.jpg?width=1200" ;
     ff:indonesianName "Nipah"@id ;
     ff:scientificName "Nypa fruticans" ;
     ff:scientificSynonym "Cocos nypa",
@@ -1380,6 +1656,8 @@ data:nipah a ff:FloraEntry,
 data:nuri_kepala_hitam a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "kasturi kepala-hitam (Lorius lory)" ;
+    ff:description "kasturi kepala-hitam (Lorius lory) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Aves. Spesies ini tercatat pada family Psittacidae dan genus Lorius. Nama Inggris yang tercatat adalah Black-capped Lory." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Black-capped Lory"@en ;
     ff:entryId "nuri_kepala_hitam" ;
     ff:hasCategory data:category_aves ;
@@ -1389,6 +1667,8 @@ data:nuri_kepala_hitam a ff:FaunaEntry,
     ff:hasOrder data:order_psittaciformes ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_aves ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Lorius_lory-20051118.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lorius_lory-20051118.jpg?width=1200" ;
     ff:indonesianName "kasturi kepala-hitam"@id ;
     ff:scientificName "Lorius lory" ;
     ff:scientificSynonym "Psittacus lory" ;
@@ -1398,6 +1678,8 @@ data:nuri_kepala_hitam a ff:FaunaEntry,
 data:nuri_merah a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "nuri maluku (Eos bornea)" ;
+    ff:description "nuri maluku (Eos bornea) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Aves. Spesies ini tercatat pada family Psittacidae dan genus Eos. Nama Inggris yang tercatat adalah Red Lory." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Red Lory"@en ;
     ff:entryId "nuri_merah" ;
     ff:hasCategory data:category_aves ;
@@ -1407,6 +1689,8 @@ data:nuri_merah a ff:FaunaEntry,
     ff:hasOrder data:order_psittaciformes ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_aves ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Eos_bornea_-Taronga_Zoo%2C_Sydney%2C_Australia-8a_%281%29.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Eos_bornea_-Taronga_Zoo%2C_Sydney%2C_Australia-8a_%281%29.jpg?width=1200" ;
     ff:indonesianName "nuri maluku"@id ;
     ff:scientificName "Eos bornea" ;
     ff:scientificSynonym "Eos borneo borneo",
@@ -1418,6 +1702,8 @@ data:nuri_merah a ff:FaunaEntry,
 data:orangutan_kalimantan a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Orangutan kalimantan (Pongo pygmaeus)" ;
+    ff:description "Orangutan kalimantan (Pongo pygmaeus) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Hominidae dan genus Pongo. Nama Inggris yang tercatat adalah Bornean orangutan." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Bornean orangutan"@en ;
     ff:entryId "orangutan_kalimantan" ;
     ff:hasCategory data:category_mammalia ;
@@ -1427,6 +1713,8 @@ data:orangutan_kalimantan a ff:FaunaEntry,
     ff:hasOrder data:order_primates ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:OrangutanP1.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/OrangutanP1.jpg?width=1200" ;
     ff:indonesianName "Orangutan kalimantan"@id ;
     ff:scientificName "Pongo pygmaeus" ;
     ff:scientificSynonym "Simia pygmaeus" ;
@@ -1436,6 +1724,8 @@ data:orangutan_kalimantan a ff:FaunaEntry,
 data:orangutan_sumatra a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Orangutan sumatera (Pongo abelii)" ;
+    ff:description "Orangutan sumatera (Pongo abelii) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Hominidae dan genus Pongo. Nama Inggris yang tercatat adalah Sumatran orangutan." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Sumatran orangutan"@en ;
     ff:entryId "orangutan_sumatra" ;
     ff:hasCategory data:category_mammalia ;
@@ -1445,6 +1735,8 @@ data:orangutan_sumatra a ff:FaunaEntry,
     ff:hasOrder data:order_primates ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Orangutan-Columbus-zoo.JPG" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orangutan-Columbus-zoo.JPG?width=1200" ;
     ff:indonesianName "Orangutan sumatera"@id ;
     ff:scientificName "Pongo abelii" ;
     ff:scientificSynonym "Pithecus satyrus abelii",
@@ -1458,6 +1750,8 @@ data:orangutan_sumatra a ff:FaunaEntry,
 data:padi a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "padi (Oryza sativa)" ;
+    ff:description "padi (Oryza sativa) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Liliopsida. Spesies ini tercatat pada family Poaceae dan genus Oryza. Nama Inggris yang tercatat adalah oryza molida." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "oryza molida"@en ;
     ff:entryId "padi" ;
     ff:hasCategory data:category_liliopsida ;
@@ -1467,6 +1761,8 @@ data:padi a ff:FloraEntry,
     ff:hasOrder data:order_poales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_liliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Reis-Rispe.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Reis-Rispe.jpg?width=1200" ;
     ff:indonesianName "padi"@id ;
     ff:scientificName "Oryza sativa" ;
     ff:scientificSynonym "Oryza aristata",
@@ -1480,6 +1776,8 @@ data:padi a ff:FloraEntry,
 data:pala a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Pala (Myristica fragrans)" ;
+    ff:description "Pala (Myristica fragrans) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Myristicaceae dan genus Myristica. Nama Inggris yang tercatat adalah Nutmeg." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Nutmeg"@en ;
     ff:entryId "pala" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -1489,6 +1787,8 @@ data:pala a ff:FloraEntry,
     ff:hasOrder data:order_magnoliales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Myristica_fragrans_at_Elmina_West_in_Seksyen_U15%2C_Shah_Alam_20231126_100924.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Myristica_fragrans_at_Elmina_West_in_Seksyen_U15%2C_Shah_Alam_20231126_100924.jpg?width=1200" ;
     ff:indonesianName "Pala"@id ;
     ff:scientificName "Myristica fragrans" ;
     ff:scientificSynonym "Aruana silvestris",
@@ -1501,6 +1801,8 @@ data:pala a ff:FloraEntry,
 data:pandan_laut a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Pandan Pudak (Pandanus tectorius)" ;
+    ff:description "Pandan Pudak (Pandanus tectorius) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Liliopsida. Spesies ini tercatat pada family Pandanaceae dan genus Pandanus. Nama Inggris yang tercatat adalah Seashore Pandan." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Seashore Pandan"@en ;
     ff:entryId "pandan_laut" ;
     ff:hasCategory data:category_liliopsida ;
@@ -1510,6 +1812,8 @@ data:pandan_laut a ff:FloraEntry,
     ff:hasOrder data:order_pandanales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_liliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Pandanus_tectorius.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pandanus_tectorius.jpg?width=1200" ;
     ff:indonesianName "Pandan Pudak"@id ;
     ff:scientificName "Pandanus tectorius" ;
     ff:scientificSynonym "Corypha laevis",
@@ -1523,6 +1827,8 @@ data:pandan_laut a ff:FloraEntry,
 data:pandan_wangi a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "pandan wangi (Pandanus amaryllifolius)" ;
+    ff:description "pandan wangi (Pandanus amaryllifolius) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Liliopsida. Spesies ini tercatat pada family Pandanaceae dan genus Pandanus. Nama Inggris yang tercatat adalah Fragrant Pandan." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Fragrant Pandan"@en ;
     ff:entryId "pandan_wangi" ;
     ff:hasCategory data:category_liliopsida ;
@@ -1532,6 +1838,8 @@ data:pandan_wangi a ff:FloraEntry,
     ff:hasOrder data:order_pandanales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_liliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Chottola.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Chottola.jpg?width=1200" ;
     ff:indonesianName "pandan wangi"@id ;
     ff:scientificName "Pandanus amaryllifolius" ;
     ff:scientificSynonym "Pandanus hasskarlii",
@@ -1544,6 +1852,8 @@ data:pandan_wangi a ff:FloraEntry,
 data:penyu_hijau a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Penyu hijau (Chelonia mydas)" ;
+    ff:description "Penyu hijau (Chelonia mydas) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Reptilia. Spesies ini tercatat pada family Cheloniidae dan genus Chelonia. Nama Inggris yang tercatat adalah Green Turtle." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Green Turtle"@en ;
     ff:entryId "penyu_hijau" ;
     ff:hasCategory data:category_reptilia ;
@@ -1553,6 +1863,8 @@ data:penyu_hijau a ff:FaunaEntry,
     ff:hasOrder data:order_testudines ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_reptilia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg?width=1200" ;
     ff:indonesianName "Penyu hijau"@id ;
     ff:scientificName "Chelonia mydas" ;
     ff:scientificSynonym "Caretta cepedii",
@@ -1566,6 +1878,8 @@ data:penyu_hijau a ff:FaunaEntry,
 data:penyu_sisik a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Penyu sisik (Eretmochelys imbricata)" ;
+    ff:description "Penyu sisik (Eretmochelys imbricata) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Reptilia. Spesies ini tercatat pada family Cheloniidae dan genus Eretmochelys. Nama Inggris yang tercatat adalah hawksbill sea turtle." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "hawksbill sea turtle"@en ;
     ff:entryId "penyu_sisik" ;
     ff:hasCategory data:category_reptilia ;
@@ -1575,6 +1889,8 @@ data:penyu_sisik a ff:FaunaEntry,
     ff:hasOrder data:order_testudines ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_reptilia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Tortuga_carey_%28Eretmochelys_imbricata%29%2C_parque_nacional_Ras_Muhammad%2C_Egipto%2C_2022-03-28%2C_DD_56.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tortuga_carey_%28Eretmochelys_imbricata%29%2C_parque_nacional_Ras_Muhammad%2C_Egipto%2C_2022-03-28%2C_DD_56.jpg?width=1200" ;
     ff:indonesianName "Penyu sisik"@id ;
     ff:scientificName "Eretmochelys imbricata" ;
     ff:scientificSynonym "Caretta bissa",
@@ -1588,6 +1904,8 @@ data:penyu_sisik a ff:FaunaEntry,
 data:petai a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "petai (Parkia speciosa)" ;
+    ff:description "petai (Parkia speciosa) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Fabaceae dan genus Parkia. Nama Inggris yang tercatat adalah Stink bean." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Stink bean"@en ;
     ff:entryId "petai" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -1597,6 +1915,8 @@ data:petai a ff:FloraEntry,
     ff:hasOrder data:order_fabales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Parkia_speciosa.JPG" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Parkia_speciosa.JPG?width=1200" ;
     ff:indonesianName "petai"@id ;
     ff:scientificName "Parkia speciosa" ;
     ff:scientificSynonym "Acacia gigantea",
@@ -1609,6 +1929,8 @@ data:petai a ff:FloraEntry,
 data:pinang a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Pinang (Areca catechu)" ;
+    ff:description "Pinang (Areca catechu) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Liliopsida. Spesies ini tercatat pada family Arecaceae dan genus Areca. Nama Inggris yang tercatat adalah Betel Nut Palm." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Betel Nut Palm"@en ;
     ff:entryId "pinang" ;
     ff:hasCategory data:category_liliopsida ;
@@ -1618,6 +1940,8 @@ data:pinang a ff:FloraEntry,
     ff:hasOrder data:order_arecales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_liliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Beetle_palm_with_nut_bunch.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Beetle_palm_with_nut_bunch.jpg?width=1200" ;
     ff:indonesianName "Pinang"@id ;
     ff:scientificName "Areca catechu" ;
     ff:scientificSynonym "Areca catechu alba",
@@ -1631,6 +1955,8 @@ data:pinang a ff:FloraEntry,
 data:pisang a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "gedang klutuk (Musa acuminata)" ;
+    ff:description "gedang klutuk (Musa acuminata) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Liliopsida. Spesies ini tercatat pada family Musaceae dan genus Musa. Nama Inggris yang tercatat adalah Wild Banana." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Wild Banana"@en ;
     ff:entryId "pisang" ;
     ff:hasCategory data:category_liliopsida ;
@@ -1640,6 +1966,8 @@ data:pisang a ff:FloraEntry,
     ff:hasOrder data:order_zingiberales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_liliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Bananapao.JPG" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bananapao.JPG?width=1200" ;
     ff:indonesianName "gedang klutuk"@id ;
     ff:scientificName "Musa acuminata" ;
     ff:scientificSynonym "Musa acuminata burmannicoides",
@@ -1652,6 +1980,8 @@ data:pisang a ff:FloraEntry,
 data:pulai a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Pulai (Alstonia scholaris)" ;
+    ff:description "Pulai (Alstonia scholaris) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Apocynaceae dan genus Alstonia. Nama Inggris yang tercatat adalah Blackboard Tree." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Blackboard Tree"@en ;
     ff:entryId "pulai" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -1661,6 +1991,8 @@ data:pulai a ff:FloraEntry,
     ff:hasOrder data:order_gentianales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Alstonia_scholaris_at_Sungai_Berang_valley%2C_Kampung_Gunung_20240225_164615.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Alstonia_scholaris_at_Sungai_Berang_valley%2C_Kampung_Gunung_20240225_164615.jpg?width=1200" ;
     ff:indonesianName "Pulai"@id ;
     ff:scientificName "Alstonia scholaris" ;
     ff:scientificSynonym "Aeschynomene laevis",
@@ -1674,6 +2006,8 @@ data:pulai a ff:FloraEntry,
 data:rafflesia_arnoldii a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Patma raksasa (Rafflesia arnoldi)" ;
+    ff:description "Patma raksasa (Rafflesia arnoldi) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Rafflesiaceae dan genus Rafflesia. Nama Inggris yang tercatat adalah Arnold's rafflesia." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Arnold's rafflesia"@en ;
     ff:entryId "rafflesia_arnoldii" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -1683,6 +2017,8 @@ data:rafflesia_arnoldii a ff:FloraEntry,
     ff:hasOrder data:order_malpighiales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Rafflesia_Arnoldii_Batang_Palupuah_Indonesia.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Rafflesia_Arnoldii_Batang_Palupuah_Indonesia.jpg?width=1200" ;
     ff:indonesianName "Patma raksasa"@id ;
     ff:scientificName "Rafflesia arnoldi" ;
     ff:scientificSynonym "Rafflesia titan" ;
@@ -1692,6 +2028,8 @@ data:rafflesia_arnoldii a ff:FloraEntry,
 data:rambutan a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "rambutan (Nephelium lappaceum)" ;
+    ff:description "rambutan (Nephelium lappaceum) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Sapindaceae dan genus Nephelium. Nama Inggris yang tercatat adalah pulasan." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "pulasan"@en ;
     ff:entryId "rambutan" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -1701,6 +2039,8 @@ data:rambutan a ff:FloraEntry,
     ff:hasOrder data:order_sapindales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Rambutan_masak_didahan.JPG" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Rambutan_masak_didahan.JPG?width=1200" ;
     ff:indonesianName "rambutan"@id ;
     ff:scientificName "Nephelium lappaceum" ;
     ff:scientificSynonym "Dimocarpus crinitus",
@@ -1713,6 +2053,8 @@ data:rambutan a ff:FloraEntry,
 data:rangkong_badak a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Rangkong badak (Buceros rhinoceros)" ;
+    ff:description "Rangkong badak (Buceros rhinoceros) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Aves. Spesies ini tercatat pada family Bucerotidae dan genus Buceros. Nama Inggris yang tercatat adalah Rhinoceros Hornbill." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Rhinoceros Hornbill"@en ;
     ff:entryId "rangkong_badak" ;
     ff:hasCategory data:category_aves ;
@@ -1722,6 +2064,8 @@ data:rangkong_badak a ff:FaunaEntry,
     ff:hasOrder data:order_bucerotiformes ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_aves ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Hornbill_2.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hornbill_2.jpg?width=1200" ;
     ff:indonesianName "Rangkong badak"@id ;
     ff:scientificName "Buceros rhinoceros" ;
     ff:searchText "buceros rhinoceros rangkong badak rhinoceros hornbill animalia chordata aves bucerotiformes bucerotidae buceros aves -" ;
@@ -1730,6 +2074,8 @@ data:rangkong_badak a ff:FaunaEntry,
 data:rangkong_gading a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Rangkong gading (Rhinoplax vigil)" ;
+    ff:description "Rangkong gading (Rhinoplax vigil) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Aves. Spesies ini tercatat pada family Bucerotidae dan genus Rhinoplax. Nama Inggris yang tercatat adalah Helmeted Hornbill." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Helmeted Hornbill"@en ;
     ff:entryId "rangkong_gading" ;
     ff:hasCategory data:category_aves ;
@@ -1739,6 +2085,8 @@ data:rangkong_gading a ff:FaunaEntry,
     ff:hasOrder data:order_bucerotiformes ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_aves ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Helmeted_Hornbill.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Helmeted_Hornbill.jpg?width=1200" ;
     ff:indonesianName "Rangkong gading"@id ;
     ff:scientificName "Rhinoplax vigil" ;
     ff:scientificSynonym "Buceros vigil" ;
@@ -1748,6 +2096,8 @@ data:rangkong_gading a ff:FaunaEntry,
 data:rusa_bawean a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Rusa Bawean (Axis kuhlii)" ;
+    ff:description "Rusa Bawean (Axis kuhlii) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Cervidae dan genus Axis. Nama Inggris yang tercatat adalah Bawean Deer." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Bawean Deer"@en ;
     ff:entryId "rusa_bawean" ;
     ff:hasCategory data:category_mammalia ;
@@ -1757,6 +2107,8 @@ data:rusa_bawean a ff:FaunaEntry,
     ff:hasOrder data:order_artiodactyla ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Adult_male_Bawean_deer_Axis_kuhlii.JPG" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Adult_male_Bawean_deer_Axis_kuhlii.JPG?width=1200" ;
     ff:indonesianName "Rusa Bawean"@id ;
     ff:scientificName "Axis kuhlii" ;
     ff:scientificSynonym "Axis kuhlii",
@@ -1768,6 +2120,8 @@ data:rusa_bawean a ff:FaunaEntry,
 data:rusa_timor a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Rusa Jawa (Rusa timorensis)" ;
+    ff:description "Rusa Jawa (Rusa timorensis) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Cervidae dan genus Rusa. Nama Inggris yang tercatat adalah Javan rusa." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Javan rusa"@en ;
     ff:entryId "rusa_timor" ;
     ff:hasCategory data:category_mammalia ;
@@ -1777,6 +2131,8 @@ data:rusa_timor a ff:FaunaEntry,
     ff:hasOrder data:order_artiodactyla ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Rusa_Deer_%28C._Timorensis%29.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Rusa_Deer_%28C._Timorensis%29.jpg?width=1200" ;
     ff:indonesianName "Rusa Jawa"@id ;
     ff:scientificName "Rusa timorensis" ;
     ff:scientificSynonym "Cervus celebensis",
@@ -1790,6 +2146,8 @@ data:rusa_timor a ff:FaunaEntry,
 data:sagu a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Rumbia (Metroxylon sagu)" ;
+    ff:description "Rumbia (Metroxylon sagu) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Liliopsida. Spesies ini tercatat pada family Arecaceae dan genus Metroxylon. Nama Inggris yang tercatat adalah sago palm." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "sago palm"@en ;
     ff:entryId "sagu" ;
     ff:hasCategory data:category_liliopsida ;
@@ -1799,6 +2157,8 @@ data:sagu a ff:FloraEntry,
     ff:hasOrder data:order_arecales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_liliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Sago_%28Metroxylon_sagu%29_in_New_Guinea.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sago_%28Metroxylon_sagu%29_in_New_Guinea.jpg?width=1200" ;
     ff:indonesianName "Rumbia"@id ;
     ff:scientificName "Metroxylon sagu" ;
     ff:scientificSynonym "Metroxylon hermaphroditum",
@@ -1812,6 +2172,8 @@ data:sagu a ff:FloraEntry,
 data:salak a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "salak (Salacca zalacca)" ;
+    ff:description "salak (Salacca zalacca) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Liliopsida. Spesies ini tercatat pada family Arecaceae dan genus Salacca. Nama Inggris yang tercatat adalah Snakefruit." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Snakefruit"@en ;
     ff:entryId "salak" ;
     ff:hasCategory data:category_liliopsida ;
@@ -1821,6 +2183,8 @@ data:salak a ff:FloraEntry,
     ff:hasOrder data:order_arecales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_liliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Salak_Salacca_zalacca.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Salak_Salacca_zalacca.jpg?width=1200" ;
     ff:indonesianName "salak"@id ;
     ff:scientificName "Salacca zalacca" ;
     ff:scientificSynonym "Calamus salakka",
@@ -1833,6 +2197,8 @@ data:salak a ff:FloraEntry,
 data:sanca_kembang a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Ular sanca kembang (Malayopython reticulatus)" ;
+    ff:description "Ular sanca kembang (Malayopython reticulatus) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Reptilia. Spesies ini tercatat pada family Pythonidae dan genus Malayopython. Nama Inggris yang tercatat adalah Reticulated python." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Reticulated python"@en ;
     ff:entryId "sanca_kembang" ;
     ff:hasCategory data:category_reptilia ;
@@ -1842,6 +2208,8 @@ data:sanca_kembang a ff:FaunaEntry,
     ff:hasOrder data:order_squamata ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_reptilia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Python_reticulatus_%D1%81%D0%B5%D1%82%D1%87%D0%B0%D1%82%D1%8B%D0%B9_%D0%BF%D0%B8%D1%82%D0%BE%D0%BD-2.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Python_reticulatus_%D1%81%D0%B5%D1%82%D1%87%D0%B0%D1%82%D1%8B%D0%B9_%D0%BF%D0%B8%D1%82%D0%BE%D0%BD-2.jpg?width=1200" ;
     ff:indonesianName "Ular sanca kembang"@id ;
     ff:scientificName "Malayopython reticulatus" ;
     ff:scientificSynonym "Boa phrygia",
@@ -1855,6 +2223,8 @@ data:sanca_kembang a ff:FaunaEntry,
 data:serai a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "serai (Cymbopogon citratus)" ;
+    ff:description "serai (Cymbopogon citratus) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Liliopsida. Spesies ini tercatat pada family Poaceae dan genus Cymbopogon. Nama Inggris yang tercatat adalah Lemon Grass." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Lemon Grass"@en ;
     ff:entryId "serai" ;
     ff:hasCategory data:category_liliopsida ;
@@ -1864,6 +2234,8 @@ data:serai a ff:FloraEntry,
     ff:hasOrder data:order_poales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_liliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:YosriNov04Pokok_Serai.JPG" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/YosriNov04Pokok_Serai.JPG?width=1200" ;
     ff:indonesianName "serai"@id ;
     ff:scientificName "Cymbopogon citratus" ;
     ff:scientificSynonym "Andropogon cerifer",
@@ -1876,6 +2248,8 @@ data:serai a ff:FloraEntry,
 data:sukun a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Sukun (Artocarpus altilis)" ;
+    ff:description "Sukun (Artocarpus altilis) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Moraceae dan genus Artocarpus. Nama Inggris yang tercatat adalah breadfruit." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "breadfruit"@en ;
     ff:entryId "sukun" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -1885,6 +2259,8 @@ data:sukun a ff:FloraEntry,
     ff:hasOrder data:order_rosales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Artocarpus_altilis_%28fruit%29.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Artocarpus_altilis_%28fruit%29.jpg?width=1200" ;
     ff:indonesianName "Sukun"@id ;
     ff:scientificName "Artocarpus altilis" ;
     ff:scientificSynonym "Artocarpus altilis",
@@ -1898,6 +2274,8 @@ data:sukun a ff:FloraEntry,
 data:tangkasi a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Tangkasi (Tarsius tarsier)" ;
+    ff:description "Tangkasi (Tarsius tarsier) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Tarsiidae dan genus Tarsius. Nama Inggris yang tercatat adalah Spectral tarsier." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Spectral tarsier"@en ;
     ff:entryId "tangkasi" ;
     ff:hasCategory data:category_mammalia ;
@@ -1907,6 +2285,8 @@ data:tangkasi a ff:FaunaEntry,
     ff:hasOrder data:order_primates ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Tarsius_tarsier_Tandurusa_zoo.JPG" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tarsius_tarsier_Tandurusa_zoo.JPG?width=1200" ;
     ff:indonesianName "Tangkasi"@id ;
     ff:scientificName "Tarsius tarsier" ;
     ff:scientificSynonym "Didelphys macrotarsos",
@@ -1920,6 +2300,8 @@ data:tangkasi a ff:FaunaEntry,
 data:tiong_emas a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "tiong emas (Gracula religiosa)" ;
+    ff:description "tiong emas (Gracula religiosa) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Aves. Spesies ini tercatat pada family Sturnidae dan genus Gracula. Nama Inggris yang tercatat adalah Common Hill Myna." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Common Hill Myna"@en ;
     ff:entryId "tiong_emas" ;
     ff:hasCategory data:category_aves ;
@@ -1929,6 +2311,8 @@ data:tiong_emas a ff:FaunaEntry,
     ff:hasOrder data:order_passeriformes ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_aves ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Common_Hill_Myna%2C_Satchari_NP%2C_Bangladesh_1.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Common_Hill_Myna%2C_Satchari_NP%2C_Bangladesh_1.jpg?width=1200" ;
     ff:indonesianName "tiong emas"@id ;
     ff:scientificName "Gracula religiosa" ;
     ff:searchText "gracula religiosa tiong emas common hill myna animalia chordata aves passeriformes sturnidae gracula aves -" ;
@@ -1937,6 +2321,8 @@ data:tiong_emas a ff:FaunaEntry,
 data:trenggiling a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Trenggiling biasa (Manis javanica)" ;
+    ff:description "Trenggiling biasa (Manis javanica) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Manidae dan genus Manis. Nama Inggris yang tercatat adalah Sunda pangolin." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Sunda pangolin"@en ;
     ff:entryId "trenggiling" ;
     ff:hasCategory data:category_mammalia ;
@@ -1946,6 +2332,8 @@ data:trenggiling a ff:FaunaEntry,
     ff:hasOrder data:order_pholidota ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Pangolin_borneo.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pangolin_borneo.jpg?width=1200" ;
     ff:indonesianName "Trenggiling biasa"@id ;
     ff:scientificName "Manis javanica" ;
     ff:searchText "manis javanica trenggiling biasa sunda pangolin animalia chordata mammalia pholidota manidae manis mammalia -" ;
@@ -1954,6 +2342,8 @@ data:trenggiling a ff:FaunaEntry,
 data:ular_sendok_jawa a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "Ular sendok jawa (Naja sputatrix)" ;
+    ff:description "Ular sendok jawa (Naja sputatrix) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Reptilia. Spesies ini tercatat pada family Elapidae dan genus Naja. Nama Inggris yang tercatat adalah Javan spitting cobra." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Javan spitting cobra"@en ;
     ff:entryId "ular_sendok_jawa" ;
     ff:hasCategory data:category_reptilia ;
@@ -1963,6 +2353,8 @@ data:ular_sendok_jawa a ff:FaunaEntry,
     ff:hasOrder data:order_squamata ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_reptilia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Naja_sputatrix.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Naja_sputatrix.jpg?width=1200" ;
     ff:indonesianName "Ular sendok jawa"@id ;
     ff:scientificName "Naja sputatrix" ;
     ff:scientificSynonym "Naja leptocoryphaea" ;
@@ -1972,6 +2364,8 @@ data:ular_sendok_jawa a ff:FaunaEntry,
 data:ulin a ff:FloraEntry,
         ff:SpeciesEntry ;
     rdfs:label "Ulin (Eusideroxylon zwageri)" ;
+    ff:description "Ulin (Eusideroxylon zwageri) merupakan entri leksikon flora dalam kingdom Plantae, phylum Tracheophyta, dan kelas Magnoliopsida. Spesies ini tercatat pada family Lauraceae dan genus Eusideroxylon. Nama Inggris yang tercatat adalah Billian." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Billian"@en ;
     ff:entryId "ulin" ;
     ff:hasCategory data:category_magnoliopsida ;
@@ -1981,6 +2375,8 @@ data:ulin a ff:FloraEntry,
     ff:hasOrder data:order_laurales ;
     ff:hasPhylum data:phylum_tracheophyta ;
     ff:hasTaxonomicClass data:class_magnoliopsida ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Eusideroxylon_zwageri.JPG" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Eusideroxylon_zwageri.JPG?width=1200" ;
     ff:indonesianName "Ulin"@id ;
     ff:scientificName "Eusideroxylon zwageri" ;
     ff:scientificSynonym "Bihania borneensis",
@@ -1994,6 +2390,8 @@ data:ulin a ff:FloraEntry,
 data:yaki a ff:FaunaEntry,
         ff:SpeciesEntry ;
     rdfs:label "monyet hitam sulawesi (Macaca nigra)" ;
+    ff:description "monyet hitam sulawesi (Macaca nigra) merupakan entri leksikon fauna dalam kingdom Animalia, phylum Chordata, dan kelas Mammalia. Spesies ini tercatat pada family Cercopithecidae dan genus Macaca. Nama Inggris yang tercatat adalah Celebes Crested Macaque." ;
+    ff:descriptionSource "Generated from validated project taxonomy fields" ;
     ff:englishName "Celebes Crested Macaque"@en ;
     ff:entryId "yaki" ;
     ff:hasCategory data:category_mammalia ;
@@ -2003,6 +2401,8 @@ data:yaki a ff:FaunaEntry,
     ff:hasOrder data:order_primates ;
     ff:hasPhylum data:phylum_chordata ;
     ff:hasTaxonomicClass data:class_mammalia ;
+    ff:imageSource "https://commons.wikimedia.org/wiki/File:Crested_Black_Macaque_%28Macaca_nigra%29.jpg" ;
+    ff:imageUrl "https://commons.wikimedia.org/wiki/Special:Redirect/file/Crested_Black_Macaque_%28Macaca_nigra%29.jpg?width=1200" ;
     ff:indonesianName "monyet hitam sulawesi"@id ;
     ff:scientificName "Macaca nigra" ;
     ff:scientificSynonym "Cynocephalus malayanus",
