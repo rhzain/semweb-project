@@ -21,7 +21,7 @@ export function HomeCatalogPreview({ items }: HomeCatalogPreviewProps) {
             Pilihan entri dari knowledge graph flora dan fauna.
           </p>
         </div>
-        <Button asChild variant="ghost">
+        <Button asChild className="gap-1.5 hover:bg-transparent hover:font-semibold [&_svg]:transition-transform [&_svg]:hover:translate-x-1" variant="ghost">
           <Link to="/data">
             Lihat Semua
             <ArrowRight data-icon="inline-end" />
