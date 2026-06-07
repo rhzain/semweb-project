@@ -21,8 +21,8 @@ export function SpeciesGrid({ items, className }: SpeciesGridProps) {
     return (
       <Empty className="border bg-card">
         <EmptyHeader>
-          <EmptyMedia variant="icon">
-            <SearchX />
+          <EmptyMedia variant="default">
+            <SearchX className="size-8 text-muted-foreground/60" strokeWidth={1.5} />
           </EmptyMedia>
           <EmptyTitle>Belum ada data yang cocok</EmptyTitle>
           <EmptyDescription>
