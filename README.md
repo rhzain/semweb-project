@@ -197,6 +197,10 @@ Halaman ini adalah pintu gerbang pencarian leksikon dengan desain visual premium
 ### Menggunakan Katalog Spesies (Data)
 Halaman katalog menampilkan seluruh data spesies dalam bentuk grid kartu yang dilengkapi filter interaktif di bilah sisi.
 
+<p align="center">
+  <img src="docs/Katalog%20Spesies.png" alt="Tampilan Katalog Spesies" width="90%" />
+</p>
+
 - **Bilah Sisi Filter**:
   - **Pencarian Teks**: Menyaring data berdasarkan nama umum, nama ilmiah, genus, family, atau deskripsi.
   - **Kingdom**: Memilih `Semua`, `Plantae` (tumbuhan), atau `Animalia` (hewan).
@@ -204,14 +208,10 @@ Halaman katalog menampilkan seluruh data spesies dalam bentuk grid kartu yang di
 - **Tombol SPARQL**: Di sebelah kanan atas grid, klik tombol **SPARQL** untuk melihat query SPARQL yang sedang aktif menyaring katalog.
 
 <p align="center">
-  <img src="docs/Katalog%20Spesies.png" alt="Tampilan Katalog Spesies" width="90%" />
+  <img src="docs/SPARQL%20Query.png" alt="Tampilan Pop-up Query SPARQL" width="90%" />
 </p>
 
 - **Kartu Spesies**: Setiap kartu menampilkan gambar spesies, nama Indonesia, nama ilmiah (cetak miring), kategori, dan potongan deskripsi ringkas. Klik kartu untuk melihat detail spesies tersebut.
-
-<p align="center">
-  <img src="docs/SPARQL%20Query.png" alt="Tampilan Pop-up Query SPARQL" width="90%" />
-</p>
 
 ---
 
